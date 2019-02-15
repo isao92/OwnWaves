@@ -1,18 +1,25 @@
 .navbar{
+    
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
     width: 100%;
-    background-color: #0e2149d0;
-    color: #ffc1c1;
+    background-color: #ffffffee;
     z-index: 5000;
-
 }
 
+.navbar img{
+    width: 50px;
+    padding-right: 8px;
+    padding-top: 8px;
+}
 
-@media (max-width:1000px){
-    .navbar{
-        /* font-size: .5rem; */
-    }
-    .navbar-expand-lg .navbar-toggler{
-        /* display: none; */
-    }
+.navbar, .navbar-brand{
+    font-size: 1.7rem;
+}
+
+#title-in-navbar{
+    float: right;
+    margin-top: 15px;
+    font-size: 1.9rem;
+    font-family: 'Anton', sans-serif;
 }
