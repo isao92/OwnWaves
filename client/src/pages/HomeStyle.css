@@ -1,0 +1,283 @@
+body, html{
+    color: black;
+    background-color: #49a7a79d;
+
+}
+
+#paper-section{
+    background-color: rgba(0, 0, 0, 0.014);
+
+}
+
+#paper-section>ul>li{
+    list-style-type: none;
+    
+}
+
+#paper-section>ul{
+    padding-left: 5px;
+}
+
+.paper-section, .paper-title-skills {
+    padding-top: 12px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+
+    
+}
+
+.paper-title-skills{
+    font-size: 1.3rem;
+    font-family: "Trebuchet MS";
+    
+}
+
+.home-main{
+    background-color: rgba(255, 255, 255, 0.666);
+    padding-top: 20px;
+    padding-bottom: 40%;
+    transition: padding 0.2s linear;
+    font-family: "Trebuchet MS";
+
+}
+
+.MuiGrid-spacing-xs-8-27{
+    
+    padding-top: 15px;
+}
+
+.hero{
+    background-image: url('https://images.unsplash.com/photo-1549739924-4511eadd51bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3668&q=80');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.agustin-chavez-title{
+    position: absolute;
+    margin-top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    zoom: 150%;
+    width: 30%;
+}
+
+/* svg animation */
+
+path {
+    stroke-dasharray: 120;
+    opacity: 10;
+    animation: animate 6s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 120;
+
+    }
+
+    30% {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 120;
+        /* stroke-width: 3%; */
+    }
+
+    90% {
+        fill: rgba(0, 0, 0, 0);
+        /* stroke-width: 1%; */
+    }
+
+    100% {
+        opacity: 10;
+        fill: rgb(0, 0, 0);
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
+
+@media (max-width:1000px){
+    #grid-skills{
+        position: absolute;
+        margin-top: 500px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .home-main{
+        padding-bottom: 150%;
+    }
+    .agustin-chavez-title{
+        left: 30%;
+    }
+}
+
+@media (max-width:768px){
+    
+    #paper-section{
+        margin-left: 5%;
+    }
+    #grid-skills{
+        position: absolute;
+        margin-top: 500px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .home-main{
+        padding-bottom: 170%;
+    }
+    .agustin-chavez-title{
+        left: 20%;
+    }
+}
+
+@media (max-width:600px){
+    #paper-section{
+        margin-left: 5%;
+        font-size: .9rem;
+    }
+    #grid-skills{
+        position: absolute;
+        margin-top: 500px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .home-main{
+        padding-bottom: 200%;
+    }
+    .agustin-chavez-title{
+        left: 13%;
+        zoom: 120%;
+    }
+}
+
+@media (max-width:500px){
+    #paper-section{
+        margin-left: 5%;
+        font-size: .9rem;
+    }
+    #grid-skills{
+        position: absolute;
+        margin-top: 500px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .home-main{
+        padding-bottom: 250%;
+    }
+    .agustin-chavez-title{
+        left: 13%;
+        zoom: 100%;
+    }
+}
+
+@media (max-width:430px){
+    #paper-section{
+        margin-left: 5%;
+        font-size: .8rem;
+    }
+    #grid-skills{
+        position: absolute;
+        margin-top: 550px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .home-main{
+        padding-bottom: 290%;
+    }
+    .agustin-chavez-title{
+        left: 13%;
+        zoom: 100%;
+    }
+}
+
+@media (max-width:370px){
+    #paper-section{
+        margin-left: 5%;
+        font-size: .8rem;
+    }
+    #grid-skills{
+        position: absolute;
+        margin-top: 550px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .home-main{
+        padding-bottom: 400%;
+    }
+    .agustin-chavez-title{
+        margin-top: 40px;
+        left: 13%;
+        zoom: 90%;
+    }
+}
+
+@media (max-width:315px){
+    #paper-section{
+        margin-left: 7%;
+        font-size: .8rem;
+    }
+    #grid-skills{
+        position: absolute;
+        margin-top: 600px;
+        width: 80%;
+    }
+    #grid-academic-history{
+        position: absolute;
+        margin-top: 80px;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .home-main{
+        padding-bottom: 450%;
+    }
+    .agustin-chavez-title{
+        margin-top: 50px;
+        left: 13%;
+        zoom: 80%;
+    }
+}
+
