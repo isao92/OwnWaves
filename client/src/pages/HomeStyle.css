@@ -1,8 +1,110 @@
 body, html{
     color: black;
-    background-color: #49a7a79d;
-
+    background-color: #b3e9ff9d;
+    width: 100%
 }
+
+html { 
+
+/* standard root font size */
+font-size: 12px;
+
+/* gradient background */
+background: -moz-linear-gradient(top, rgba(41,137,216,0) 0%, rgba(41,137,216,0.55) 31%, rgba(30,87,153,0.86) 48%, rgba(30,87,153,1) 56%, rgba(30,87,153,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(41,137,216,0) 0%,rgba(41,137,216,0.55) 31%,rgba(30,87,153,0.86) 48%,rgba(30,87,153,1) 56%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(41,137,216,0) 0%,rgba(41,137,216,0.55) 31%,rgba(30,87,153,0.86) 48%,rgba(30,87,153,1) 56%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
+}
+
+/* homepage */
+
+/* space between top of page and Create Your Own Experience Card */
+#grid-homepage{
+    margin-top: 12%;
+}
+
+/* booking and rent section */
+#book-homepage, #rent-homepage{
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* svg holder div */
+.homePage-main-logo{
+    /* border: 2px solid red; */
+    position: fixed;
+    top: 0;
+    margin-top: 70px;
+    width: 90%;
+    height: 20%;
+}
+/* svg positioning */
+.homePage-main-svg{
+    /* border: 3px solid black; */
+    width: 100%;
+    /* 50% on mobile */
+    height: 100%;
+}
+
+/* Create Experience Title Font */
+
+
+.paper-title-homepage{
+    /* border: 1px solid green; */
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    
+}
+
+.explanation-title-homepage{
+    font-size: 2.6rem;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+.explanation-text-homepage{
+
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 2%;
+}
+
+
+/* sign up booking and renting buttons */
+
+#book-homepage > button, #rent-homepage > button{
+    font-size: 1.3rem;
+    margin-left: 1%;
+    color: white;
+    background-color: rgba(0, 140, 255, 0.692)
+}
+
+#book-homepage, #rent-homepage{
+    
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2%;
+    background-color: rgba(240, 248, 255, 0.808)
+}
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+}
+
+.paper-section, .paper-title-homepage {
+    padding-top: 12px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    z-index: 50;
+}
+
 
 #paper-section{
     background-color: rgba(0, 0, 0, 0.014);
@@ -15,62 +117,15 @@ body, html{
 }
 
 #paper-section>ul{
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
-.paper-section, .paper-title-skills {
-    padding-top: 12px;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 2%;
 
-    
-}
-
-.paper-title-skills{
-    font-size: 1.3rem;
-    font-family: "Trebuchet MS";
-    
-}
-
-.home-main{
-    background-color: rgba(255, 255, 255, 0.666);
-    padding-top: 20px;
-    padding-bottom: 40%;
-    transition: padding 0.2s linear;
-    font-family: "Trebuchet MS";
-
-}
-
-.MuiGrid-spacing-xs-8-27{
-    
-    padding-top: 15px;
-}
-
-.hero{
-    background-image: url('https://images.unsplash.com/photo-1549739924-4511eadd51bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3668&q=80');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
-}
-
-.agustin-chavez-title{
-    position: absolute;
-    margin-top: 3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    zoom: 150%;
-    width: 30%;
-}
 
 /* svg animation */
 
-path {
-    stroke-dasharray: 120;
+path, polygon {
+    stroke-dasharray: 1900;
     opacity: 10;
     animation: animate 6s;
 }
@@ -79,205 +134,52 @@ path {
     0% {
         opacity: 0;
         fill: none;
-        stroke-dashoffset: 120;
+        stroke-dashoffset: 5000;
 
     }
 
     30% {
         opacity: 10;
-        fill: none;
-        stroke-dashoffset: 120;
+        fill-opacity: 0;
+        stroke-dashoffset: 1900;
         /* stroke-width: 3%; */
     }
 
     90% {
-        fill: rgba(0, 0, 0, 0);
+        opacity: 50;
+        fill-opacity: 1;
         /* stroke-width: 1%; */
     }
 
     100% {
-        opacity: 10;
-        fill: rgb(0, 0, 0);
+        opacity: 5;
         stroke-dashoffset: 0;
     }
 }
 
 
+@media (min-width:300px){
 
 
-@media (max-width:1000px){
-    #grid-skills{
-        position: absolute;
-        margin-top: 500px;
-        width: 80%;
+    html{
+        font-size: 10px;
     }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-    }
-    .home-main{
-        padding-bottom: 150%;
-    }
-    .agustin-chavez-title{
-        left: 30%;
+
+}
+
+@media (min-width:1500px){
+
+    html{
+        font-size: 14px;
     }
 }
 
-@media (max-width:768px){
-    
-    #paper-section{
-        margin-left: 5%;
-    }
-    #grid-skills{
-        position: absolute;
-        margin-top: 500px;
-        width: 80%;
-    }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-    }
-    .home-main{
-        padding-bottom: 170%;
-    }
-    .agustin-chavez-title{
-        left: 20%;
-    }
-}
 
-@media (max-width:600px){
-    #paper-section{
-        margin-left: 5%;
-        font-size: .9rem;
-    }
-    #grid-skills{
-        position: absolute;
-        margin-top: 500px;
-        width: 80%;
-    }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    .home-main{
-        padding-bottom: 200%;
-    }
-    .agustin-chavez-title{
-        left: 13%;
-        zoom: 120%;
-    }
-}
+@media (min-width:3000px){
 
-@media (max-width:500px){
-    #paper-section{
-        margin-left: 5%;
-        font-size: .9rem;
+    html{
+        font-size: 18px;
     }
-    #grid-skills{
-        position: absolute;
-        margin-top: 500px;
-        width: 80%;
-    }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    .home-main{
-        padding-bottom: 250%;
-    }
-    .agustin-chavez-title{
-        left: 13%;
-        zoom: 100%;
-    }
-}
 
-@media (max-width:430px){
-    #paper-section{
-        margin-left: 5%;
-        font-size: .8rem;
-    }
-    #grid-skills{
-        position: absolute;
-        margin-top: 550px;
-        width: 80%;
-    }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    .home-main{
-        padding-bottom: 290%;
-    }
-    .agustin-chavez-title{
-        left: 13%;
-        zoom: 100%;
-    }
-}
-
-@media (max-width:370px){
-    #paper-section{
-        margin-left: 5%;
-        font-size: .8rem;
-    }
-    #grid-skills{
-        position: absolute;
-        margin-top: 550px;
-        width: 80%;
-    }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    .home-main{
-        padding-bottom: 400%;
-    }
-    .agustin-chavez-title{
-        margin-top: 40px;
-        left: 13%;
-        zoom: 90%;
-    }
-}
-
-@media (max-width:315px){
-    #paper-section{
-        margin-left: 7%;
-        font-size: .8rem;
-    }
-    #grid-skills{
-        position: absolute;
-        margin-top: 600px;
-        width: 80%;
-    }
-    #grid-academic-history{
-        position: absolute;
-        margin-top: 80px;
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    .home-main{
-        padding-bottom: 450%;
-    }
-    .agustin-chavez-title{
-        margin-top: 50px;
-        left: 13%;
-        zoom: 80%;
-    }
 }
 
