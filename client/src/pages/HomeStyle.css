@@ -210,7 +210,7 @@ background-repeat: no-repeat;
 
     /* maing logo bigger margintop */
     .homePage-main-logo{
-        margin-top: 10%;
+        margin-top: 15%;
     }
 
     html{
@@ -218,7 +218,7 @@ background-repeat: no-repeat;
     }
 
     #paper-section{
-        margin-top: 45%;
+        margin-top: 42%;
     }
 
     .homePage-main-logo{
@@ -242,7 +242,7 @@ background-repeat: no-repeat;
 
     /* maing logo bigger margintop */
     .homePage-main-logo{
-        margin-top: 9%;
+        margin-top: 14%;
         
     }
 
@@ -251,7 +251,7 @@ background-repeat: no-repeat;
     }
 
     #paper-section{
-        margin-top: 45%;
+        margin-top: 40%;
     }
 
 }
@@ -266,7 +266,7 @@ background-repeat: no-repeat;
 
     /* maing logo bigger margintop */
     .homePage-main-logo{
-        margin-top: 8%;
+        margin-top: 11%;
         margin-left: -2%;
     }
 
