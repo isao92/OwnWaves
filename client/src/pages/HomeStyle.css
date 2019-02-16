@@ -14,6 +14,7 @@ background: -moz-linear-gradient(top, rgba(41,137,216,0) 0%, rgba(41,137,216,0.5
 background: -webkit-linear-gradient(top, rgba(41,137,216,0) 0%,rgba(41,137,216,0.55) 31%,rgba(30,87,153,0.86) 48%,rgba(30,87,153,1) 56%,rgba(30,87,153,0) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(41,137,216,0) 0%,rgba(41,137,216,0.55) 31%,rgba(30,87,153,0.86) 48%,rgba(30,87,153,1) 56%,rgba(30,87,153,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', endColorstr='#001e5799',GradientType=0 ); /* IE6-9 */
+background-repeat: no-repeat;
 }
 
 /* homepage */
@@ -185,7 +186,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
     }
 
     #paper-section{
-        margin-top: 85%;
+        margin-top: 45%;
     }
 
     .homePage-main-logo{
@@ -217,11 +218,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
     }
 
     #paper-section{
-        margin-top: 55%;
+        margin-top: 45%;
     }
 
     .homePage-main-logo{
-        margin-left: -20%;
+        margin-left: -22%;
     }
 
     .homePage-main-svg{
@@ -242,6 +243,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
     /* maing logo bigger margintop */
     .homePage-main-logo{
         margin-top: 9%;
+        
     }
 
     html{
@@ -256,10 +258,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
 @media (min-width:500px){
 
+    /* ignore grid in small screens */
+    #main-middlecard-homepage{
+        flex-basis: auto;
+        max-width: auto;
+    }
 
     /* maing logo bigger margintop */
     .homePage-main-logo{
         margin-top: 8%;
+        margin-left: -2%;
     }
 
     html{
@@ -268,10 +276,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
     #paper-section{
         margin-top: 35%;
-    }
-    
-    .homePage-main-logo{
-        margin-left: 0;
     }
 
     .homePage-main-svg{
@@ -298,6 +302,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
         font-size: 9px;
     }
 
+    /* maing logo bigger margintop */
+    .homePage-main-logo{
+        margin-left: 0;
+    }
+
     
     #paper-section{
         margin-top: 15%;
@@ -310,6 +319,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
     html{
         font-size: 11px;
     }
+    
+    #paper-section{
+        margin-top: -5%;
+    }
 }
 
 
@@ -317,6 +330,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
     html{
         font-size: 12px;
+    }
+    
+    #paper-section{
+        margin-top: 0;
     }
 
 }

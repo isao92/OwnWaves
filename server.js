@@ -99,7 +99,7 @@ const projectsSeed = [
       technologies_used: "Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone",
       imageUrl: "./assets/images/garage-with-motorbike.jpg",
       projectURL: "https://project3-full-stack-react.herokuapp.com/",
-      spacingForProject: "120px"
+      spacingForProject: "1"
   },
   {
       first_name: "Keyboards",
@@ -108,16 +108,16 @@ const projectsSeed = [
       technologies_used: "All keyboards come with a case, stand, sustain pedal and cables",
       imageUrl: "./assets/images/keyboard.jpg",
       projectURL: "https://isao92.github.io/project-one/",
-      spacingForProject: "630px"
+      spacingForProject: "2"
   },
   {
-      first_name: "Guitars & Bass",
-      last_name: "Acoustic & Electric",
+      first_name: "Guitars",
+      last_name: "& Bass",
       description: "Usually every guitar player has his own guitar but some might be interested in recording a higher quality sound with a high quality guitar",
       technologies_used: "These high quality guitars come with strap, pick ups and cables",
       imageUrl: "./assets/images/electric-guitar.jpg",
       projectURL: "https://react-cbc.herokuapp.com/",
-      spacingForProject: "1130px"
+      spacingForProject: "3"
   },
   {
       first_name: "Drums",
@@ -126,7 +126,7 @@ const projectsSeed = [
       technologies_used: "These drums come with everything including the seat and mat :)",
       imageUrl: "./assets/images/drums-rumandshark.jpg",
       projectURL: "https://isao92.github.io/RPS-Multiplayer/",
-      spacingForProject: "1670px"
+      spacingForProject: "4"
   }
 ];
 
