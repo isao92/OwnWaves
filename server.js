@@ -8,6 +8,8 @@ const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
+
+
 // Setting CORS so that any website can
 // Access our API
 app.use((req, res, next) => {
@@ -96,20 +98,20 @@ app.use(function (err, req, res, next) {
 // Code to seed projects collection
 const projectsSeed = [
   {
-      first_name: "Mushrooms",
-      last_name: "You Me",
-      description: 'Using the MERN structure, this application allows you to browse through the local mushroom store "You Me Mushrooms" as a user learn about the store. As a farmer/admin you can enter mushroom batch information into the database and retrieve it, it also allows you to access a calendar and a mushroom collection.',
-      technologies_used: "This project was done using React.js, Node.js, Robo 3T, MongoDB, Axios, JSON Web Token, Express, Morgan, React Event Listener, Postman, Google Material-UI, Model-View-Controller Paradigm, Heroku, mLab, Javascript, JSX, jQuery, Bootstrap 4, CSS3, Google Fonts, PowerShell, Bash GNU, Google Chrome and Adobe Photoshop CC 2018.",
-      imageUrl: "https://lh3.google.com/u/0/d/1p_WhPbxdRHFT6W9mA0N1MTGuMu2b6Y1w=w3000-h5331-iv1",
+      first_name: "Michael",
+      last_name: "Johnson",
+      description: 'Hi I am renting out my garage weekends from 6AM to 8PM, you can be as loud as you want as long as the garage is closed, there is no ventilation and as far as refreshments come at extra costs, no drugs allowed and there are two open parking spots in front of the garage.',
+      technologies_used: "No acoustic treatment.",
+      imageUrl: "./assets/images/garage-with-motorbike.jpg",
       projectURL: "https://project3-full-stack-react.herokuapp.com/",
       spacingForProject: "150px"
   },
   {
-      first_name: "The Jam?",
-      last_name: "Where's",
-      description: "Using Eventbrite’s, Last.fm and Ebay APIs this application provides a short summary of the artist, any related upcoming events and merchandise available. All you have to do is to type in the name of your favorite artist and browse.",
-      technologies_used: "Technologies used for this project are Javascript, HTML5, CSS, Bootstrap, Adobe Illustrator and Ajax.",
-      imageUrl: "https://lh4.googleusercontent.com/upztoUZE2sQuOfh9KopQ2hNeBxqNuelL3qVEERHRW1IEcEg5AX3qn48S9_zAkiAQah7Nwe3sbVKVl1Z7Ssgx=w1920-h937-rw",
+      first_name: "Tom",
+      last_name: "Cruise",
+      description: "Hey guys I'm feeling generous, I have a Japanese Juno keyboard specially designed for me and I will let anyone rent it out since I'm working a lot on this new movie and I'm not using it.",
+      technologies_used: "Comes with power cable, stand and sustain pedal.",
+      imageUrl: "./assets/images/keyboard.jpg",
       // description: "I have an electro-acoustic Martin & Co. Guitar"
       projectURL: "https://isao92.github.io/project-one/",
       spacingForProject: "580px"
@@ -119,7 +121,7 @@ const projectsSeed = [
       last_name: "React",
       description: "This application allows you to enter a book and store it in the database.",
       technologies_used: "The Application uses React, Express, Bootstrap and Mongoose.",
-      imageUrl: "https://lh3.googleusercontent.com/3sex5ppvkdSXnSe3JFuOLfTR9xvvV6QlBcxRdW9gTv5fczWQSYZhcF5u24HaOC-zFy3RKLVeu0DeJUoHJpa9=w1920-h937-rw",
+      imageUrl: "./assets/images/electric-guitar.jpg",
       // description: "I have a little sound prof garage available"
       projectURL: "https://react-cbc.herokuapp.com/",
       spacingForProject: "995px"
@@ -129,7 +131,7 @@ const projectsSeed = [
       last_name: "Rock Paper Scissors",
       description: "This application allows users to play Rock Paper Scissors Online with their friends with the use of a single chat.",
       technologies_used: "This app was developed using Firebase, Javascript, HTML5, CSS, and Bootstrap.",
-      imageUrl: "https://lh4.googleusercontent.com/pRK9OVpn_7iu8V0009AMvoreK-d-jB-XE0CfrbxJLn_nyNguA19MJrxPiyRZyQmLwjY3ur_Ne80BRenQT9As=w1920-h937-rw",
+      imageUrl: "./assets/images/drums-rumandshark.jpg",
       projectURL: "https://isao92.github.io/RPS-Multiplayer/",
       spacingForProject: "1395px"
   }
