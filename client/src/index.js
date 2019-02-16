@@ -14,7 +14,7 @@ import Navbar from './components/Navbar';
 import ProjectsPage from './pages/ProjectsPage';
 
 // dont need
-import AdminPage from './pages/AdminPage';
+import RentPage from './pages/RentPage';
 import Login from './components/Login';
 import Profile from './components/Profile';
 import Signup from './components/Signup';
@@ -32,7 +32,7 @@ ReactDOM.render(
             <Navbar />
             {/* Home */}
             <Route exact path="/" component={App} />
-            <Route exact path="/adminpage" component={AdminPage} />
+            <Route exact path="/rentpage" component={RentPage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
