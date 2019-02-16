@@ -16,9 +16,30 @@
 }
 
 #project-image-card{
-    margin-top: 50px;
+    margin-top: 20px;
     /* border: 2px solid black; */
     max-width: 100%;
     background-color: #00000000;
     box-shadow: none;
 }
+
+
+@media (max-width:400px){
+
+        
+    #project-image-card{
+        margin-top: -10%;
+        /* border: 2px solid black; */
+        max-width: 100%;
+        background-color: #00000000;
+        box-shadow: none;
+    }
+
+        
+    #clickable-image-category{
+        margin-top: 100px;
+        height: 300px;
+    }
+
+}
+    
