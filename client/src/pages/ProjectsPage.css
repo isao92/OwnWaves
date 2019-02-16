@@ -61,8 +61,8 @@ svg{
 }
 
 .projects-title-svgid{
-    position: fixed;
-    top: 0;
+    position: absolute;
+    margin-top: 50px;
     margin-left:20%;
     width: 60%;
     /* border: green solid 2px; */

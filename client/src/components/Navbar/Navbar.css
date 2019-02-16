@@ -23,3 +23,44 @@
     font-size: 1.9rem;
     font-family: 'Anton', sans-serif;
 }
+
+@media (min-width:10px){
+    #title-in-navbar{
+        font-size: 5rem;
+    }
+}
+@media (min-width:300px){
+    #title-in-navbar{
+        font-size: 4.5rem;
+    }
+}
+@media (min-width:400px){
+    #title-in-navbar{
+        font-size: 3.1rem;
+    }
+}
+@media (min-width:500px){
+    #title-in-navbar{
+        font-size: 2.9rem;
+    }
+}
+@media (min-width:600px){
+    #title-in-navbar{
+        font-size: 1.9rem;
+    }
+}
+@media (min-width:700px){
+    #title-in-navbar{
+        font-size: 1.9rem;
+    }
+}
+@media (min-width:900px){
+    #title-in-navbar{
+        font-size: 1.9rem;
+    }
+}
+@media (min-width:1400px){
+    #title-in-navbar{
+        font-size: 1.9rem;
+    }
+}

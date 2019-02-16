@@ -6,10 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import "./ProjectsPage.css";
 
-
 class ProjectsPage extends Component {
-  
-
 
   constructor () {
     super()
@@ -27,13 +24,11 @@ class ProjectsPage extends Component {
   };
 
   componentDidMount() {
-
     this.showProjects();
   }
 
   // this code delivers all projects in an array of objects
   showProjects = () => {
-
     API.getAllProjects()
       .then(res => {
     
@@ -41,6 +36,7 @@ class ProjectsPage extends Component {
       })
       .catch(err => console.log(err));
   };
+
   //getProjectinfo
   getProjectInfo = (description, projectURL, spacingForProjects, last_name, first_name, technologies_used) => {
     this.setState({description: description});
@@ -53,23 +49,19 @@ class ProjectsPage extends Component {
 
 
   render() {
- 
-
     return (
       //Projectpage
       <div className="Projectpage">
         <div className="heroProjects">
-        
+            {/* whole page container */}
             <Grid container spacing={16} style={{width: '100%', margin: '0'}}>
 
-            
-              
+              {/* matrix lines container */}
               <Grid container spacing={16} style={{width: '100%', margin: '0'}}>
-                
-              {/* viewbox for mobile */}
-              {/* 50 0 20 90 */} 
-
+              
+              {/* matrix backgroundlines */}
                 <Grid item xs={12} style={{width: '100%', padding: '0'}}>
+                  
                   <div className="projects-background-svg">
                   <svg className="svg-projects-page" version="1.1" x="0px" y="0px" width="1366px" height="768px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768">
                   
@@ -106,12 +98,10 @@ class ProjectsPage extends Component {
                   </svg>
                   </div>
 
-
-
-
                 </Grid> 
               </Grid>
-                
+              
+              {/* build your studio title */}
               <Grid item xs={12}>
                 <div className="projects-title-svg">
                 <svg className="projects-title-svgid" version="1.1" id="Layer_1"  x="0px" y="0px" width="1366px" height="150px" viewBox="0 0 1366 150" enableBackground="new 0 0 1366 150">
@@ -159,20 +149,22 @@ class ProjectsPage extends Component {
                 </div>
               </Grid>
 
+              {/* spacing */}
               <Grid item xs={1}></Grid>
-                  
+              
+              {/* category images and description card generator */}
               <Grid item xs={10}>
                   
-              <Grid container spacing={8} className="images-description-container">
+              <Grid container spacing={4} className="images-description-container">
                       
                       <Grid item xs={6} id="projects-imgcard-mobile">
                       
                         {this.state.projectsArray.map(item => (
-
+                        
+                        // category image container
                         <Grid item xs={12} key={item._id}>
                           
                           <MediaCard className="projects-card"
-                            
                             last_name={item.last_name} 
                             first_name={item.first_name}
                             picsrc = {item.imageUrl}
@@ -187,7 +179,7 @@ class ProjectsPage extends Component {
                         ))}
                       </Grid>
                       
-                      <Grid item xs={6} >
+                      <Grid item xs={6}  style={{marginTop: "100px"}}>
                         
                           <Paper style={{marginTop: this.state.spacingForProjects}} className="projects-description-card" id="projects-dcard-mobile" >
                               
@@ -200,23 +192,21 @@ class ProjectsPage extends Component {
                             </div>
                             <div className="button-projects-deploy">
                               <Button>
-                                
                                 <a href={this.state.projectURL}>
                                   Deploy site
                                 </a>
-
                               </Button>
                             </div>
 
                             <br/>
                           </Paper>
-                        </Grid>
-                    </Grid>
+                      </Grid>
+                  </Grid>
               </Grid>
 
             
 
-          </Grid>
+            </Grid>
         
         </div>
       </div>
