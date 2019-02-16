@@ -5,7 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-
+import './MediaCard.css';
 
 const styles = {
   card: {
@@ -16,6 +16,7 @@ const styles = {
   },
   cardProjectTitle:{
     textAlign: "center"
+
   }
 };
 
@@ -30,7 +31,7 @@ function MediaCard(props) {
         <CardActionArea >
         
           <CardContent className={classes.cardProjectTitle} id="project-image-title" style={{position: "absolute"}}>
-            <p>{props.last_name} {' '} {props.first_name}</p>
+            <p>{props.first_name} {' '} {props.last_name}</p>
           </CardContent>
 
           <CardMedia id="projects-screenshots-mobile"

@@ -89,51 +89,44 @@ app.use(function (err, req, res, next) {
   }
 });
 
-// mushrooms image
-// https://lh3.google.com/u/0/d/1p_WhPbxdRHFT6W9mA0N1MTGuMu2b6Y1w=w1094-h819-iv1
-
-// the jam image
-// https://lh3.google.com/u/0/d/1s5eswGAFf2TNd8Wy4w2SvNmF1zo7IPVG=w1433-h855-iv1
 
 // Code to seed projects collection
 const projectsSeed = [
   {
-      first_name: "Michael",
-      last_name: "Johnson",
-      description: 'Hi I am renting out my garage weekends from 6AM to 8PM, you can be as loud as you want as long as the garage is closed, there is no ventilation and as far as refreshments come at extra costs, no drugs allowed and there are two open parking spots in front of the garage.',
-      technologies_used: "No acoustic treatment.",
+      first_name: "Rental",
+      last_name: "Space",
+      description: 'Choose your vibe, your zone, your battlefield',
+      technologies_used: "Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone",
       imageUrl: "./assets/images/garage-with-motorbike.jpg",
       projectURL: "https://project3-full-stack-react.herokuapp.com/",
-      spacingForProject: "150px"
+      spacingForProject: "120px"
   },
   {
-      first_name: "Tom",
-      last_name: "Cruise",
-      description: "Hey guys I'm feeling generous, I have a Japanese Juno keyboard specially designed for me and I will let anyone rent it out since I'm working a lot on this new movie and I'm not using it.",
-      technologies_used: "Comes with power cable, stand and sustain pedal.",
+      first_name: "Keyboards",
+      last_name: " & MIDI",
+      description: "Browse through the collection of keyboards and MIDI keyboards available for rental and start making your own waves of sound",
+      technologies_used: "All keyboards come with a case, stand, sustain pedal and cables",
       imageUrl: "./assets/images/keyboard.jpg",
-      // description: "I have an electro-acoustic Martin & Co. Guitar"
       projectURL: "https://isao92.github.io/project-one/",
-      spacingForProject: "580px"
+      spacingForProject: "630px"
   },
   {
-      first_name: "Book Log",
-      last_name: "React",
-      description: "This application allows you to enter a book and store it in the database.",
-      technologies_used: "The Application uses React, Express, Bootstrap and Mongoose.",
+      first_name: "Guitars & Bass",
+      last_name: "Acoustic & Electric",
+      description: "Usually every guitar player has his own guitar but some might be interested in recording a higher quality sound with a high quality guitar",
+      technologies_used: "These high quality guitars come with strap, pick ups and cables",
       imageUrl: "./assets/images/electric-guitar.jpg",
-      // description: "I have a little sound prof garage available"
       projectURL: "https://react-cbc.herokuapp.com/",
-      spacingForProject: "995px"
+      spacingForProject: "1130px"
   },
   {
-      first_name: "Online",
-      last_name: "Rock Paper Scissors",
-      description: "This application allows users to play Rock Paper Scissors Online with their friends with the use of a single chat.",
-      technologies_used: "This app was developed using Firebase, Javascript, HTML5, CSS, and Bootstrap.",
+      first_name: "Drums",
+      last_name: "& Drum pads",
+      description: "Hardest to move around and that's where we come in and help transport, pick your ground shaking machine with caution!",
+      technologies_used: "These drums come with everything including the seat and mat :)",
       imageUrl: "./assets/images/drums-rumandshark.jpg",
       projectURL: "https://isao92.github.io/RPS-Multiplayer/",
-      spacingForProject: "1395px"
+      spacingForProject: "1670px"
   }
 ];
 

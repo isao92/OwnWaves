@@ -37,7 +37,7 @@ function CenteredGrid(props) {
           <Grid item xs={12} id="grid-homepage">
 
             <div className="homePage-main-logo">
-              <svg className="homePage-main-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8000px" height="1000px" viewBox="0 0 8000 1000" enableBackground="new 0 0 8000 1000">
+            <svg className="homePage-main-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8000px" height="1000px" viewBox="0 0 8000 1000" enableBackground="new 0 0 8000 1000">
             <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="4280.9766" y1="505.6514" x2="4572.6055" y2="505.6514">  <stop  offset="0" stopColor="#262262"/> <stop  offset="1" stopColor="#2484C6" stopOpacity="0"/>
             </linearGradient>
             <circle fill="none" stroke="url(#SVGID_1_)" strokeWidth="9.4074" strokeMiterlimit="10" cx="4426.791" cy="505.649" r="141.111"/>

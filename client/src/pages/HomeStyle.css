@@ -33,7 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
     /* border: 2px solid red; */
     position: fixed;
     top: 0;
-    margin-top: 70px;
+    margin-top: 7%;
     width: 90%;
     height: 20%;
 }
@@ -70,6 +70,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 }
 
 
+/* footer */
+.footer{
+    width: 100%;
+    text-align: center;
+}
+
+/* big middle card */
+.paper-section, .paper-title-homepage {
+    padding-top: 12px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    z-index: 50;
+}
+
+
 /* sign up booking and renting buttons */
 
 #book-homepage > button, #rent-homepage > button{
@@ -89,26 +108,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 }
 
 
-.footer{
-    width: 100%;
-    text-align: center;
-}
-
-.paper-section, .paper-title-homepage {
-    padding-top: 12px;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 1%;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 1%;
-    z-index: 50;
-}
 
 
 #paper-section{
-    background-color: rgba(0, 0, 0, 0.014);
-
+    background-color: rgba(255, 255, 255, 0.65);
+    margin-top: 9%;
+    margin-bottom: 20%;
 }
 
 #paper-section>ul>li{
@@ -124,7 +129,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
 /* svg animation */
 
-path, polygon {
+#grid-homepage path, #grid-homepage polygon {
     stroke-dasharray: 1900;
     opacity: 10;
     animation: animate 6s;
@@ -158,19 +163,113 @@ path, polygon {
 }
 
 
+@media (min-width:10px){
+
+
+    html{
+        font-size: 3px;
+    }
+
+    #paper-section{
+        margin-top: 85%;
+    }
+
+    .homePage-main-logo{
+        margin-left: -10%;
+    }
+
+    .homePage-main-svg{
+        width: 120%;
+    }
+
+
+}
+
 @media (min-width:300px){
 
 
     html{
-        font-size: 10px;
+        font-size: 5px;
     }
 
+    #paper-section{
+        margin-top: 55%;
+    }
+
+    .homePage-main-logo{
+        margin-left: -20%;
+    }
+
+    .homePage-main-svg{
+        width: 140%;
+    }
+
+
+}
+
+@media (min-width:400px){
+
+
+    html{
+        font-size: 6px;
+    }
+
+    #paper-section{
+        margin-top: 45%;
+    }
+
+}
+
+@media (min-width:500px){
+
+
+    html{
+        font-size: 7px;
+    }
+
+    #paper-section{
+        margin-top: 35%;
+    }
+    
+    .homePage-main-logo{
+        margin-left: 0;
+    }
+
+    .homePage-main-svg{
+        width: 100%;
+    }
+
+}
+
+@media (min-width:600px){
+
+
+    html{
+        font-size: 9px;
+    }
+
+    #paper-section{
+        margin-top: 25%;
+    }
+
+}
+@media (min-width:1000px){
+
+    html{
+        font-size: 9px;
+    }
+
+    
+    #paper-section{
+        margin-top: 15%;
+    }
+    
 }
 
 @media (min-width:1500px){
 
     html{
-        font-size: 14px;
+        font-size: 11px;
     }
 }
 
@@ -178,7 +277,7 @@ path, polygon {
 @media (min-width:3000px){
 
     html{
-        font-size: 18px;
+        font-size: 12px;
     }
 
 }
