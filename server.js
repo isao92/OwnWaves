@@ -95,37 +95,37 @@ const projectsSeed = [
   {
       first_name: "Rental",
       last_name: "Space",
-      description: 'Choose your vibe, your zone, your battlefield',
-      technologies_used: "Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone",
+      description: 'Choose your vibe, your zone, your environment, studio, garage, backyard. Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone.',
+      technologies_used: "Every place comes with electricity and a toilet. Click below to learn more.",
       imageUrl: "./assets/images/garage-with-motorbike.jpg",
-      projectURL: "https://project3-full-stack-react.herokuapp.com/",
+      projectURL: "/FindPlace",
       spacingForProject: "1"
   },
   {
     first_name: "Vocal",
     last_name: "Equipment",
-    description: "Second most important in a studio, wether you're a jazz, rock, hiphop, alternative, funk, punk, grunge, capturing that unique voice with the appropiate microphone changes the game",
-    technologies_used: "These mics come with a stand, case, pop filter (must use), and cables",
+    description: "Second most important in a studio, wether you're a pop, hiphop, grunge artist, capturing that unique voice with the appropiate microphone changes the game.",
+    technologies_used: "These mics come with a stand, case, pop filter (must use), and cables.",
     imageUrl: "./assets/images/vocals-mic.jpg",
-    projectURL: "https://isao92.github.io/RPS-Multiplayer/",
+    projectURL: "/VocalEquipment",
     spacingForProject: "2"
   },
   {
       first_name: "Keyboards",
       last_name: " & MIDI",
-      description: "Browse through the collection of keyboards and MIDI keyboards available for rental and start making your own waves of sound",
-      technologies_used: "All keyboards come with a case, stand, sustain pedal and cables",
+      description: "Browse through the collection of keyboards and MIDI keyboards available for rental and start making your own waves of sound.",
+      technologies_used: "All keyboards come with a case, stand, sustain pedal and cables.",
       imageUrl: "./assets/images/keyboard.jpg",
-      projectURL: "https://isao92.github.io/project-one/",
+      projectURL: "/KeyboardEquipment",
       spacingForProject: "3"
   },
   {
       first_name: "Guitars",
       last_name: "& Bass",
-      description: "Usually every guitar player has his own guitar but some might be interested in recording a specific one either modern or rare",
-      technologies_used: "Guitar are provided with strap, pick ups and cables",
+      description: "Usually every guitar player has his own guitar but some might be interested in recording a specific one either modern or rare.",
+      technologies_used: "Guitar are provided with strap, pick ups and cables.",
       imageUrl: "./assets/images/electric-guitar.jpg",
-      projectURL: "https://react-cbc.herokuapp.com/",
+      projectURL: "/Guitars",
       spacingForProject: "4"
   },
   {
@@ -134,7 +134,7 @@ const projectsSeed = [
       description: "Pick your ground shaking, boom generator, sound splashing machine with caution!",
       technologies_used: "These drums come with everything including the seat and mat :)",
       imageUrl: "./assets/images/drums-rumandshark.jpg",
-      projectURL: "https://isao92.github.io/RPS-Multiplayer/",
+      projectURL: "/Drums",
       spacingForProject: "5"
   }
 ];
