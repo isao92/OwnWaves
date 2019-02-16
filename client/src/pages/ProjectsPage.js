@@ -105,9 +105,10 @@ class ProjectsPage extends Component {
               {/* navigation for categories */}
               <nav className="select-category-projects" id="select-category-id">
                 <a href="#1">Rental</a>
-                <a href="#2">Keyboards</a>
-                <a href="#3">Guitars</a>
-                <a href="#4">Drums</a>
+                <a href="#2">Vocals</a>
+                <a href="#3">Keyboards</a>
+                <a href="#4">Guitars</a>
+                <a href="#5">Drums</a>
               </nav>
               
               {/* build your studio title */}

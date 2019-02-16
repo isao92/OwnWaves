@@ -102,31 +102,40 @@ const projectsSeed = [
       spacingForProject: "1"
   },
   {
+    first_name: "Vocal",
+    last_name: "Equipment",
+    description: "Second most important in a studio, wether you're a jazz, rock, hiphop, alternative, funk, punk, grunge, capturing that unique voice with the appropiate microphone changes the game",
+    technologies_used: "These mics come with a stand, case, pop filter (must use), and cables",
+    imageUrl: "./assets/images/vocals-mic.jpg",
+    projectURL: "https://isao92.github.io/RPS-Multiplayer/",
+    spacingForProject: "2"
+  },
+  {
       first_name: "Keyboards",
       last_name: " & MIDI",
       description: "Browse through the collection of keyboards and MIDI keyboards available for rental and start making your own waves of sound",
       technologies_used: "All keyboards come with a case, stand, sustain pedal and cables",
       imageUrl: "./assets/images/keyboard.jpg",
       projectURL: "https://isao92.github.io/project-one/",
-      spacingForProject: "2"
+      spacingForProject: "3"
   },
   {
       first_name: "Guitars",
       last_name: "& Bass",
-      description: "Usually every guitar player has his own guitar but some might be interested in recording a higher quality sound with a high quality guitar",
-      technologies_used: "These high quality guitars come with strap, pick ups and cables",
+      description: "Usually every guitar player has his own guitar but some might be interested in recording a specific one either modern or rare",
+      technologies_used: "Guitar are provided with strap, pick ups and cables",
       imageUrl: "./assets/images/electric-guitar.jpg",
       projectURL: "https://react-cbc.herokuapp.com/",
-      spacingForProject: "3"
+      spacingForProject: "4"
   },
   {
       first_name: "Drums",
-      last_name: "& Drum pads",
-      description: "Hardest to move around and that's where we come in and help transport, pick your ground shaking machine with caution!",
+      last_name: "& pads",
+      description: "Pick your ground shaking, boom generator, sound splashing machine with caution!",
       technologies_used: "These drums come with everything including the seat and mat :)",
       imageUrl: "./assets/images/drums-rumandshark.jpg",
       projectURL: "https://isao92.github.io/RPS-Multiplayer/",
-      spacingForProject: "4"
+      spacingForProject: "5"
   }
 ];
 

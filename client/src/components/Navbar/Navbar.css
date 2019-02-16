@@ -17,6 +17,21 @@
     font-size: 1.7rem;
 }
 
+#hamburger-button{
+    margin-top: 5%;
+}
+
+.navbar-collapse{
+    font-size: 2rem;
+}
+
+.navbar-toggler-icon{
+    width: 5.8em;
+    height: 2.4em;
+    margin-top: 20%;
+    padding-bottom: 10%;
+}
+
 #title-in-navbar{
     float: right;
     margin-top: 15px;
