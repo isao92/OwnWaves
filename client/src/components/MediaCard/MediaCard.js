@@ -28,12 +28,14 @@ function MediaCard(props) {
     
       
       <Card className={classes.card} id="project-image-card" onClick={() => props.getProjectInfo(props.description, props.projectURL, props.spacingForProject, props.last_name, props.first_name, props.technologies_used)}>
-        <CardActionArea >
+
+      
+        <section id={props.spacingForProject}></section>
+        <CardActionArea id="clickable-image-category">
         
           <CardContent className={classes.cardProjectTitle} id="project-image-title" style={{position: "absolute"}}>
             <p>{props.first_name} {' '} {props.last_name}</p>
           </CardContent>
-
           <CardMedia id="projects-screenshots-mobile"
             className={classes.media}
             image= {props.picsrc}

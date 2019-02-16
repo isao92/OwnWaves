@@ -100,6 +100,15 @@ class ProjectsPage extends Component {
 
                 </Grid> 
               </Grid>
+
+
+              {/* navigation for categories */}
+              <nav className="select-category-projects" id="select-category-id">
+                <a href="#1">Rental</a>
+                <a href="#2">Keyboards</a>
+                <a href="#3">Guitars</a>
+                <a href="#4">Drums</a>
+              </nav>
               
               {/* build your studio title */}
               <Grid item xs={12}>
@@ -153,12 +162,12 @@ class ProjectsPage extends Component {
               <Grid item xs={1}></Grid>
               
               {/* category images and description card generator */}
-              <Grid item xs={10}>
+              <Grid item xs={10} className="image-description-container" id="image-container-mobile">
                   
-              <Grid container spacing={4} className="images-description-container">
+              <Grid container spacing={8} className="images-description-container">
                       
                       <Grid item xs={6} id="projects-imgcard-mobile">
-                      
+                      <div className="scrolling-box">
                         {this.state.projectsArray.map(item => (
                         
                         // category image container
@@ -177,7 +186,11 @@ class ProjectsPage extends Component {
                           />
                         </Grid>
                         ))}
+                      </div>
+
+                          <div className="end-of-imgs"></div>
                       </Grid>
+                      
                       
                       <Grid item xs={6}  style={{marginTop: "100px"}}>
                         
@@ -191,9 +204,9 @@ class ProjectsPage extends Component {
                                 {this.state.technologies_used}
                             </div>
                             <div className="button-projects-deploy">
-                              <Button>
+                              <Button id="button-category">
                                 <a href={this.state.projectURL}>
-                                  Deploy site
+                                  Show Me
                                 </a>
                               </Button>
                             </div>
