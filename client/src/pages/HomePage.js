@@ -32,7 +32,7 @@ function CenteredGrid(props) {
 
       <div className="hero">
         
-        <Grid container spacing={16} style={{width: '100%'}}>
+        <Grid container spacing={16} style={{width: '100%', margin: '0'}}>
       
           <Grid item xs={12} id="grid-homepage">
 
@@ -127,11 +127,11 @@ function CenteredGrid(props) {
           </Grid>
 
           {/* left spacing */}
-          <Grid item xs={2}>
+          <Grid item xs={2} >
           </Grid>
           
           {/* create your own experience */}
-          <Grid item xs={8}>
+          <Grid item xs={8} id="main-middlecard-homepage">
             <Grid item xs={12} id="grid-homepage">
 
             

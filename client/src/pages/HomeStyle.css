@@ -43,6 +43,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
     width: 100%;
     /* 50% on mobile */
     height: 100%;
+    z-index: 1;
 }
 
 /* Create Experience Title Font */
@@ -108,12 +109,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 }
 
 
-
+#main-middlecard-homepage{
+    z-index: 1000;
+}
 
 #paper-section{
     background-color: rgba(255, 255, 255, 0.65);
     margin-top: 9%;
     margin-bottom: 20%;
+    
 }
 
 #paper-section>ul>li{
@@ -165,6 +169,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
 @media (min-width:10px){
 
+    /* ignore grid in small screens */
+    #main-middlecard-homepage{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /* maing logo bigger margintop */
+    .homePage-main-logo{
+        margin-top: 13%;
+    }
 
     html{
         font-size: 3px;
@@ -187,6 +201,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
 @media (min-width:300px){
 
+    /* ignore grid in small screens */
+    #main-middlecard-homepage{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /* maing logo bigger margintop */
+    .homePage-main-logo{
+        margin-top: 10%;
+    }
 
     html{
         font-size: 5px;
@@ -209,6 +233,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
 @media (min-width:400px){
 
+    /* ignore grid in small screens */
+    #main-middlecard-homepage{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /* maing logo bigger margintop */
+    .homePage-main-logo{
+        margin-top: 9%;
+    }
 
     html{
         font-size: 6px;
@@ -222,6 +256,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002989d8', e
 
 @media (min-width:500px){
 
+
+    /* maing logo bigger margintop */
+    .homePage-main-logo{
+        margin-top: 8%;
+    }
 
     html{
         font-size: 7px;
