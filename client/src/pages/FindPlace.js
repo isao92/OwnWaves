@@ -51,16 +51,16 @@ class FindPlace extends Component {
   render() {
     return (
       //Projectpage
-      <div className="Projectpage">
+      <div className="Bookingpage">
         <div className="heroplaces">
             {/* whole page container */}
-            <Grid container spacing={16} style={{width: '100%', margin: '0'}}>
+            <Grid container spacing={16} style={{width: '100%', margin: '0', flexBasis: '100%', maxWidth: '100%'}}>
 
               {/* spacing */}
               <Grid item xs={1}></Grid>
               
               {/* category images and description card generator */}
-              <Grid item xs={10} className="image-description-container" id="image-container-mobile">
+              <Grid item xs={10} className="image-booking-container" id="image-container-mobile">
                   
               <Grid container spacing={8} className="images-description-container">
                       
@@ -92,9 +92,9 @@ class FindPlace extends Component {
                       
                       <Grid item xs={6}  style={{marginTop: "100px"}}>
                         
-                          <Paper style={{marginTop: this.state.spacingForplaces}} className="places-description-card" id="places-dcard-mobile" >
+                          <Paper className="places-description-card" id="places-dcard-mobile" >
                               
-                            <div className="description-project-generated">
+                            <div className="description-places-generated">
                                 {this.state.description}
                             </div>
                               <br/>
