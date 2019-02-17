@@ -38,12 +38,12 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1>Login</h1>
+      <div className="container" style={{marginTop: '100px', paddingBottom: '70%', fontSize: '2rem', width: '50%'}}>
+        <h1 style={{fontSize: '3rem'}}>Login</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email address:</label>
-            <input className="form-control"
+            <input style={{fontSize: '2rem'}} className="form-control"
                    placeholder="Email goes here..."
                    name="email"
                    type="email"
@@ -52,7 +52,7 @@ class Login extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="pwd">Password:</label>
-            <input className="form-control"
+            <input style={{fontSize: '2rem'}} className="form-control"
                    placeholder="Password goes here..."
                    name="password"
                    type="password"

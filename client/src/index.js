@@ -12,12 +12,13 @@ import axios from "axios";
 // Our Components
 import Navbar from './components/Navbar';
 import ProjectsPage from './pages/ProjectsPage';
-
-// dont need
-import RentPage from './pages/RentPage';
 import Login from './components/Login';
-import Profile from './components/Profile';
 import Signup from './components/Signup';
+import FindPlace from './pages/FindPlace';
+
+// when logged in
+import RentPage from './pages/RentPage';
+import Profile from './components/Profile';
 
 
 // Here is if we have an id_token in localStorage
@@ -36,7 +37,8 @@ ReactDOM.render(
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
-            <Route exact path="/ProjectsPage" component={ProjectsPage} />
+            <Route exact path="/findPlace" component={FindPlace} />
+            <Route exact path="/projectsPage" component={ProjectsPage} />
         </div>
     </Router>
     , document.getElementById('root')

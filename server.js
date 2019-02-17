@@ -89,8 +89,74 @@ app.use(function (err, req, res, next) {
   }
 });
 
+const placesSeed = [
+  {
+    first_name: "Living Room",
+      last_name: "Acoustic Panels included",
+      description: 'We are a family friendly environment, and this room is available only on the weekends from Friday to Sunday.',
+      technologies_used: "Acoustic treatment greatly reduces noise but there is still a small amount of noise.",
+      imageUrl: "./assets/images/garage-with-motorbike.jpg",
+      projectURL: "/findPlace1",
+      spacingForProject: "0"
+  }
+]
 
-// Code to seed projects collection
+db.Places
+.deleteMany({})
+.then(() => db.Places.collection.insertMany(placesSeed))
+.then(data => {
+  console.log(data.result.n + " records inserted!");
+})
+.catch(err => {
+  console.error(err);
+});
+// END seed code
+
+// back-end api routes for places collection
+// get json of all documents in places collection
+app.get("/api/places", (req, res) => {
+  db.Places
+    .find({})
+    .then(datafoo => res.json(datafoo))
+    .catch(err => res.status(400).json(err));
+});
+
+// get one projects by id
+app.get("/api/places/:id", (req, res) =>{
+  db.Places
+  .findById({_id: req.params.id})
+  .then(datafoo=>datafoo.remove())
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+}),
+
+
+// create new places document
+app.post("/api/places", (req, res) => {
+  db.Places
+    .create(req.body)
+    .then(datafoo => res.json(datafoo))
+    .catch(err => res.status(400).json(err));
+});
+
+// update a document in projects collection using its id
+app.put("/api/places/:id", (req, res) =>{
+  db.Places
+  .findOneAndUpdate({_id: req.params.id}, req.body)
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+});
+
+// delete a record in projects collection using its id
+app.delete("/api/places/:id", (req, res) =>{
+  db.Places
+  .findById({_id: req.params.id})
+  .then(datafoo=>datafoo.remove())
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+});
+
+// Code to seed places collection
 const projectsSeed = [
   {
       first_name: "Rental",
@@ -98,7 +164,7 @@ const projectsSeed = [
       description: 'Choose your vibe, your zone, your environment, studio, garage, backyard. Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone.',
       technologies_used: "Every place comes with electricity and a toilet. Click below to learn more.",
       imageUrl: "./assets/images/garage-with-motorbike.jpg",
-      projectURL: "/FindPlace",
+      projectURL: "/findPlace",
       spacingForProject: "1"
   },
   {

@@ -13,6 +13,21 @@ export default {
     return axios.get(`/api/projects`);
   },
 
+  // get all projects documents as array of objects
+  getAllPlaces: () => {
+    return axios.get(`/api/places`);
+  },
+
+  // get data associated with one project
+  getOnePlaces: (id) => {
+    return axios.get(`/api/places/${id}`);
+  },
+
+  // projects delete
+  deleteOnePlaces: (id) => {
+    return axios.delete(`/api/places/${id}`)
+  },
+
   // get data associated with one project
   getOneProjects: (id) => {
     return axios.get(`/api/projects/${id}`);

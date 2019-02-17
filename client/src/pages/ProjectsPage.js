@@ -11,7 +11,7 @@ class ProjectsPage extends Component {
   constructor () {
     super()
     this.state = {
-      // species
+      // projects
       projectsArray: [],
       click: true,
       description: "Get description by clicking on Projects",

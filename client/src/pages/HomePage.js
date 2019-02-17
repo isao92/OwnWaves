@@ -162,7 +162,9 @@ function CenteredGrid(props) {
                             Create your own recording experience.
                             
                             <Button>
+                              <a href="/findPlace">
                               Book
+                              </a>
                             </Button>
                           </Paper>
                         </Grid>
