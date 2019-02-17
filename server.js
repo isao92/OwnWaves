@@ -91,14 +91,41 @@ app.use(function (err, req, res, next) {
 
 const placesSeed = [
   {
-    first_name: "Living Room",
+    first_name: "Living Room (Home Studio)",
       last_name: "Acoustic Panels included",
       description: 'We are a family friendly environment, and this room is available only on the weekends from Friday to Sunday.',
       technologies_used: "Acoustic treatment greatly reduces noise but there is still a small amount of noise.",
-      imageUrl: "./assets/images/garage-with-motorbike.jpg",
+      imageUrl: "./assets/images/bluehouse.jpg",
       projectURL: "/findPlace1",
       spacingForProject: "0"
-  }
+  },
+  {
+    first_name: "Three Room Studio (The Threes)",
+      last_name: "Professional Acoustic Panels included",
+      description: 'We have this entire thre room studio available, and this room is a full week booking minimum.',
+      technologies_used: "Acoustic treatment is professional grade, music basic gear included and more.",
+      imageUrl: "./assets/images/modern-house1.jpg",
+      projectURL: "/findPlace2",
+      spacingForProject: "1"
+  },
+  {
+    first_name: "Small Apartment Studio",
+      last_name: "No Acoustic Treatment",
+      description: 'Hi we are in the bottom floor perfect for acoustic calm recording sessions during the day, I play drums here and neighbors are totally cool with it so feel free to book single day sessions here on the weekends.',
+      technologies_used: "There's basic acoustic treatment",
+      imageUrl: "./assets/images/apartment-studio1.jpg",
+      projectURL: "/findPlace3",
+      spacingForProject: "2"
+  },
+  {
+    first_name: "Multi Room House",
+      last_name: "Acoustic Panels included, plus sound blocking mats.",
+      description: "We are allowing musicians to individually book each room as either practice, teaching or recording sessions. Book quickly this place is very popular.",
+      technologies_used: "Professional sound blocking and ventilation at each room, yet there's a small amount of noise generated that comes from the other rooms.",
+      imageUrl: "./assets/images/modern-onefloor.jpg",
+      projectURL: "/findPlace4",
+      spacingForProject: "3"
+  },
 ]
 
 db.Places
