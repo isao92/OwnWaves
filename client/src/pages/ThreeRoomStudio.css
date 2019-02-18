@@ -12,9 +12,12 @@
 
 .background-svg-div{
     position: fixed;
-
 }
 
+.input-fields-threeroom{
+    position: relative;
+    
+}
 
 
 @keyframes animationA {
