@@ -4,19 +4,19 @@ import Grid from "@material-ui/core/Grid";
 import API from "../utils/API";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import "./ProjectsPage.css";
+import "./BuildsPage.css";
 
-class ProjectsPage extends Component {
+class BuildsPage extends Component {
 
   constructor () {
     super()
     this.state = {
-      // projects
-      projectsArray: [],
+      // builds
+      buildsArray: [],
       click: true,
-      description: "Get description by clicking on Projects",
-      projectURL: "",
-      spacingForProjects: "",
+      description: "Get description by clicking on builds",
+      buildURL: "",
+      spacingForBuilds: "",
       last_name: "",
       first_name: "",
       technologies_used: ""
@@ -24,24 +24,24 @@ class ProjectsPage extends Component {
   };
 
   componentDidMount() {
-    this.showProjects();
+    this.showBuilds();
   }
 
-  // this code delivers all projects in an array of objects
-  showProjects = () => {
-    API.getAllProjects()
+  // this code delivers all builds in an array of objects
+  showBuilds = () => {
+    API.getAllBuilds()
       .then(res => {
     
-        this.setState({ projectsArray: res.data});
+        this.setState({ buildsArray: res.data});
       })
       .catch(err => console.log(err));
   };
 
-  //getProjectinfo
-  getProjectInfo = (description, projectURL, spacingForProjects, last_name, first_name, technologies_used) => {
+  //getbuildinfo
+  getBuildInfo = (description, buildURL, spacingForBuilds, last_name, first_name, technologies_used) => {
     this.setState({description: description});
-    this.setState({projectURL: projectURL});
-    this.setState({spacingForProjects: spacingForProjects});
+    this.setState({buildURL: buildURL});
+    this.setState({spacingForBuilds: spacingForBuilds});
     this.setState({last_name: last_name});
     this.setState({first_name: first_name});
     this.setState({technologies_used: technologies_used});
@@ -50,9 +50,9 @@ class ProjectsPage extends Component {
 
   render() {
     return (
-      //Projectpage
-      <div className="Projectpage">
-        <div className="heroProjects">
+      //buildpage
+      <div className="Buildpage">
+        <div className="heroBuilds">
             {/* whole page container */}
             <Grid container spacing={16} style={{width: '100%', margin: '0'}}>
 
@@ -62,8 +62,8 @@ class ProjectsPage extends Component {
               {/* matrix backgroundlines */}
                 <Grid item xs={12} style={{width: '100%', padding: '0'}}>
                   
-                  <div className="projects-background-svg">
-                  <svg className="svg-projects-page" version="1.1" x="0px" y="0px" width="1366px" height="768px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768">
+                  <div className="builds-background-svg">
+                  <svg className="svg-builds-page" version="1.1" x="0px" y="0px" width="1366px" height="768px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768">
                   
                   <g id="Layer_7">
                     <polyline fill="none" stroke="#000000" strokeWidth="1.9756" strokeMiterlimit="10" points="1363.623,764.568 454.013,513 633.198,138.635 1087.795,156.683 1033.944,286.372 884.011,270.987 921.571,201.772 983.142,215.252 	"/>
@@ -80,8 +80,8 @@ class ProjectsPage extends Component {
                   </svg>
                   </div>
 
-                  <div className="projects-background-svg2">
-                  <svg className="svg2-projects-page" version="1.1" x="0px" y="0px" width="1366px" height="768px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768">
+                  <div className="builds-background-svg2">
+                  <svg className="svg2-builds-page" version="1.1" x="0px" y="0px" width="1366px" height="768px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768">
                   
                   <g id="Layer_6">
                     <polyline fill="none" stroke="#000000" strokeWidth="1.9756" strokeMiterlimit="10" points="0,768 1190.834,515.105 633.198,412 715.632,156.683 1021.746,193.548 999.219,236.531 983.142,215.252 	"/>
@@ -103,7 +103,7 @@ class ProjectsPage extends Component {
 
 
               {/* navigation for categories */}
-              <nav className="select-category-projects" id="select-category-id">
+              <nav className="select-category-builds" id="select-category-id">
                 <a href="#1">Rental</a>
                 <a href="#2">Vocals</a>
                 <a href="#3">Keyboards</a>
@@ -113,8 +113,8 @@ class ProjectsPage extends Component {
               
               {/* build your studio title */}
               <Grid item xs={12}>
-                <div className="projects-title-svg">
-                <svg className="projects-title-svgid" version="1.1" id="Layer_1"  x="0px" y="0px" width="1366px" height="150px" viewBox="0 0 1366 150" enableBackground="new 0 0 1366 150">
+                <div className="builds-title-svg">
+                <svg className="builds-title-svgid" version="1.1" id="Layer_1"  x="0px" y="0px" width="1366px" height="150px" viewBox="0 0 1366 150" enableBackground="new 0 0 1366 150">
                   <g>
                     <path stroke="#000000" strokeWidth="2" strokeMiterlimit="10" d="M160.664,127.433v-19.507h9.943	c6.629,0,9.944,3.314,9.944,9.943v6.811c6.587-0.931,13.172-1.867 19.757-2.789c-0.182-4.859-1.805-9.172-4.912-12.92	c-3.299-3.98-8.248-5.971-14.845-5.971c6.598-0.773,11.546-2.818,14.845-6.133c3.299-3.314,4.948-7.868,4.948-13.661v-5.018	c0-5.39-1.944-10.037-5.83-13.939c-3.888-3.903-8.543-5.854-13.963-5.854H140.87v71.566	C147.472,129.167,154.07,128.319,160.664,127.433z M160.664,68.337h9.943c2.695,0,5.025,0.969,6.993,2.904	c1.967,1.937,2.951,4.252,2.951,6.947v9.943c0,2.695-0.984,5.026-2.951,6.993c-1.968,1.967-4.298,2.95-6.993,2.95h-9.943V68.337z"
                       />
@@ -167,23 +167,23 @@ class ProjectsPage extends Component {
                   
               <Grid container spacing={8} className="images-description-container">
                       
-                      <Grid item xs={6} id="projects-imgcard-mobile">
+                      <Grid item xs={6} id="builds-imgcard-mobile">
                       <div className="scrolling-box">
-                        {this.state.projectsArray.map(item => (
+                        {this.state.buildsArray.map(item => (
                         
                         // category image container
                         <Grid item xs={12} key={item._id}>
                           
-                          <MediaCard className="projects-card"
+                          <MediaCard className="builds-card"
                             last_name={item.last_name} 
                             first_name={item.first_name}
                             picsrc = {item.imageUrl}
                             description = {item.description}
                             technologies_used = {item.technologies_used}
-                            spacingForProject = {item.spacingForProject}
-                            projectURL = {item.projectURL}
-                            //getProjectinfo
-                            getProjectInfo={this.getProjectInfo}
+                            spacingForBuild = {item.spacingForBuild}
+                            buildURL = {item.buildURL}
+                            //getbuildinfo
+                            getBuildInfo={this.getBuildInfo}
                           />
                         </Grid>
                         ))}
@@ -195,18 +195,18 @@ class ProjectsPage extends Component {
                       
                       <Grid item xs={6}  style={{marginTop: "100px"}}>
                         
-                          <Paper style={{marginTop: this.state.spacingForProjects}} className="projects-description-card" id="projects-dcard-mobile" >
+                          <Paper style={{marginTop: this.state.spacingForbuilds}} className="builds-description-card" id="builds-dcard-mobile" >
                               
-                            <div className="description-project-generated">
+                            <div className="description-build-generated">
                                 {this.state.description}
                             </div>
                               <br/>
                             <div className="technologies-generated">
                                 {this.state.technologies_used}
                             </div>
-                            <div className="button-projects-deploy">
+                            <div className="button-builds-deploy">
                               <Button id="button-category">
-                                <a href={this.state.projectURL}>
+                                <a href={this.state.buildURL}>
                                   Show Me
                                 </a>
                               </Button>
@@ -228,6 +228,6 @@ class ProjectsPage extends Component {
     }
   };
 
-  export default ProjectsPage;
+  export default BuildsPage;
 
 

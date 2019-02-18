@@ -11,7 +11,9 @@ import axios from "axios";
 
 // Our Components
 import Navbar from './components/Navbar';
-import ProjectsPage from './pages/ProjectsPage';
+import BuildsPage from './pages/BuildsPage';
+// import HomeStudio from './pages/HomeStudio';
+import ThreeRoomStudio from './pages/ThreeRoomStudio';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import FindPlace from './pages/FindPlace';
@@ -38,7 +40,9 @@ ReactDOM.render(
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/findPlace" component={FindPlace} />
-            <Route exact path="/projectsPage" component={ProjectsPage} />
+            <Route exact path="/buildsPage" component={BuildsPage} />
+            {/* <Route exact path="/HomeStudio" component={HomeStudio} /> */}
+            <Route exact path="/ThreeRoomStudio" component={ThreeRoomStudio} />
         </div>
     </Router>
     , document.getElementById('root')

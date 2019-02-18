@@ -22,7 +22,8 @@
 }
 
 .navbar-collapse{
-    font-size: 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .navbar-toggler-icon{
@@ -35,7 +36,7 @@
 #title-in-navbar{
     float: right;
     margin-top: 15px;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     font-family: 'Anton', sans-serif;
 }
 

@@ -66,7 +66,9 @@ class Signup extends Component {
                    id="pwd"
                    onChange={this.handleChange}/>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary" style={{fontSize: '2rem'}}>
+          Submit
+          </button>
         </form>
         <p><Link to="/login">Go to Login</Link></p>
       </div>

@@ -8,34 +8,34 @@ export default {
   signUpUser: (username, email, password) => {
     return axios.post('api/signup', {username: username, email: email, password: password});
   },
-  // get all projects documents as array of objects
-  getAllProjects: () => {
-    return axios.get(`/api/projects`);
+  // get all builds documents as array of objects
+  getAllBuilds: () => {
+    return axios.get(`/api/builds`);
   },
 
-  // get all projects documents as array of objects
+  // get all builds documents as array of objects
   getAllPlaces: () => {
     return axios.get(`/api/places`);
   },
 
-  // get data associated with one project
+  // get data associated with one build
   getOnePlaces: (id) => {
     return axios.get(`/api/places/${id}`);
   },
 
-  // projects delete
+  // builds delete
   deleteOnePlaces: (id) => {
     return axios.delete(`/api/places/${id}`)
   },
 
-  // get data associated with one project
-  getOneProjects: (id) => {
-    return axios.get(`/api/projects/${id}`);
+  // get data associated with one build
+  getOneBuilds: (id) => {
+    return axios.get(`/api/builds/${id}`);
   },
 
-  // projects delete
-  deleteOneProjects: (id) => {
-    return axios.delete(`/api/projects/${id}`)
+  // builds delete
+  deleteOneBuilds: (id) => {
+    return axios.delete(`/api/builds/${id}`)
   },
 
   // get all batch documents as array of objects
@@ -43,9 +43,9 @@ export default {
     return axios.get(`/api/batch`);
   },
 
-  // start a new batch document (use on Admin page) projects inside parenthesis
-  startBatch: (batchNum, bagNum, projects, bagSize) => {
-    // projects: projects
-    return axios.post('api/batch', {batchNum: batchNum, bagNum: bagNum, projects: projects, bagSize: bagSize}); 
+  // start a new batch document (use on Admin page) builds inside parenthesis
+  startBatch: (batchNum, bagNum, builds, bagSize) => {
+    // builds: builds
+    return axios.post('api/batch', {batchNum: batchNum, bagNum: bagNum, builds: builds, bagSize: bagSize}); 
   }
 };
