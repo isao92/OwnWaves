@@ -2,51 +2,50 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Grid from '@material-ui/core/Grid';
+import ConfirmButton from '../ConfirmButton/ConfirmButton';
 
 const styles = theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     marginTop: 30,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    padding: '20px',
   },
   margin: {
     margin: theme.spacing.unit,
   },
   textField: {
     flexBasis: 200,
+    
+    fontSize: '1.5rem'
   },
 });
 
 const ranges = [
   {
-    value: '0-20',
-    label: '0 to 20',
+    value: '3-5',
+    label: '3 to 5 days',
   },
   {
-    value: '21-50',
-    label: '21 to 50',
+    value: '7',
+    label: '1 Week',
   },
   {
-    value: '51-100',
-    label: '51 to 100',
+    value: '14',
+    label: '2 Weeks or more',
   },
 ];
 
 class InputFields extends React.Component {
   state = {
-    amount: '',
-    password: '',
-    weight: '',
-    weightRange: '',
-    showPassword: false,
+    genre: [''],
+    timeRange: ['3-5 days'],
+    
   };
 
   handleChange = prop => event => {
@@ -66,25 +65,25 @@ class InputFields extends React.Component {
 
       <Grid container spacing={24}>
       <Grid item xs={1}></Grid>
-      <Grid item xs={8}>
+      <Grid item xs={11}>
         <TextField
           id="outlined-simple-start-adornment"
           className={classNames(classes.margin, classes.textField)}
           variant="outlined"
-          label="With outlined TextField"
+          label="Enter your Name"
           InputProps={{
-            startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+            startAdornment: <InputAdornment position="start">*</InputAdornment>,
           }}
         />
         <TextField
           select
           className={classNames(classes.margin, classes.textField)}
           variant="outlined"
-          label="With Select"
-          value={this.state.weightRange}
-          onChange={this.handleChange('weightRange')}
+          label="How Long"
+          value={this.state.timeRange}
+          onChange={this.handleChange('timeRange')}
           InputProps={{
-            startAdornment: <InputAdornment position="start">Kg</InputAdornment>,
+            startAdornment: <InputAdornment position="start">Time</InputAdornment>,
           }}
         >
           {ranges.map(option => (
@@ -94,49 +93,27 @@ class InputFields extends React.Component {
           ))}
         </TextField>
         <TextField
-          id="outlined-adornment-amount"
+          id="outlined-simple-start-adornment"
           className={classNames(classes.margin, classes.textField)}
           variant="outlined"
-          label="Amount"
-          value={this.state.amount}
-          onChange={this.handleChange('amount')}
+          label="Enter your Email"
           InputProps={{
-            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            startAdornment: <InputAdornment position="start">*</InputAdornment>,
           }}
         />
         <TextField
-          id="outlined-adornment-weight"
+          id="outlined-adornment-genre"
           className={classNames(classes.margin, classes.textField)}
           variant="outlined"
-          label="Weight"
-          value={this.state.weight}
-          onChange={this.handleChange('weight')}
-          helperText="Weight"
-          InputProps={{
-            endAdornment: <InputAdornment position="end">Kg</InputAdornment>,
-          }}
+          label="Genre"
+          value={this.state.genre}
+          onChange={this.handleChange('genre')}
+          helperText="This is optional"
+          
         />
-        <TextField
-          id="outlined-adornment-password"
-          className={classNames(classes.margin, classes.textField)}
-          variant="outlined"
-          type={this.state.showPassword ? 'text' : 'password'}
-          label="Password"
-          value={this.state.password}
-          onChange={this.handleChange('password')}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="Toggle password visibility"
-                  onClick={this.handleClickShowPassword}
-                >
-                  {this.state.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
+
+        <ConfirmButton></ConfirmButton>
+        
         </Grid>
       </Grid>
       </div>

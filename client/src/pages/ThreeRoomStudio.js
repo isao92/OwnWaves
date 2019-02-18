@@ -204,13 +204,17 @@ class ThreeRoomStudio extends Component {
 
 
                 <Grid item xs={1}></Grid>
+
                 <Grid item xs={5}>
-                
                 <DescriptionRental /> 
                 </Grid>
+
                 <Grid item xs={5}>
+                <div className="input-fields-threeroom">
                 <InputFields/>
+                </div>
                 </Grid>
+                
                 <Grid item xs={1}></Grid>
 
 
