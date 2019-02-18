@@ -1,0 +1,43 @@
+.background-svg{
+    position: fixed;
+    width: 100%;
+}
+
+.background-svg line {
+    stroke-dasharray: 1200;
+    stroke-opacity: 0;
+    animation: animationA 3s;
+
+}
+
+.background-svg-div{
+    position: fixed;
+
+}
+
+
+
+@keyframes animationA {
+    100% {
+        stroke-opacity: 0;
+        stroke-dashoffset: 10;
+
+    }
+
+    50% {
+        stroke-opacity: 1;
+        stroke-width: .05%;
+    }
+
+    30% {
+        stroke-opacity: 0;
+    }
+
+    1% {
+        
+        stroke-opacity: 1;
+        stroke-dashoffset: 10800;
+    }
+}
+
+

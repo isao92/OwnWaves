@@ -1,6 +1,7 @@
 module.exports = {
   User: require('./User'),
-  Projects: require("./projects"),
+  Builds: require("./builds"),
   Admin: require("./admin"),
   Places: require("./Places")
+
 };

@@ -4,7 +4,7 @@
 }
 
 /* navbar category selection */
-.select-category-projects{
+.select-category-builds{
     position: fixed;
     margin-top: 64px;
     width: 100%;
@@ -17,7 +17,7 @@
     height: 50px;
 }
 
-.select-category-projects > a {
+.select-category-builds > a {
     padding-right: 1%;
     padding-left: 1%;
     margin-right: 2%;
@@ -27,7 +27,7 @@
 }
 
 
-.projects-title-svg{
+.builds-title-svg{
     zoom: 3;
     position: absolute;
     top: -53%;
@@ -40,12 +40,12 @@ svg{
     z-index: 1;
 }
 
-.projects-background-svg{
+.builds-background-svg{
     /* border: red solid 2px; */
     position: fixed;
 }
 
-.svg-projects-page{
+.svg-builds-page{
     width: 200%;
     height: 100%;
     /* border: black solid 2px; */
@@ -53,12 +53,12 @@ svg{
     margin-left: -130%;
 }
 
-.projects-background-svg2{
+.builds-background-svg2{
     /* border: green solid 2px; */
     position: fixed;
 }
 
-.svg2-projects-page{
+.svg2-builds-page{
     width: 200%;
     height: 100%;
     /* border: blue solid 2px; */
@@ -68,14 +68,14 @@ svg{
 /* svg animation */
 
 
-.svg-projects-page > g > polyline {
+.svg-builds-page > g > polyline {
     stroke-dasharray: 900;
     stroke-opacity: 0;
     animation: animated 8s;
 }
 
 
-.svg2-projects-page > g > polyline {
+.svg2-builds-page > g > polyline {
     stroke-dasharray: 900;
     stroke-opacity: 0;
     animation: animated 8s;
@@ -88,7 +88,7 @@ svg{
 
 /* initial margin top on description card */
 
-.projects-description-card{
+.builds-description-card{
     /* border: red solid 2px; */
     position: fixed;
     margin-top: 180px;
@@ -100,7 +100,7 @@ svg{
     /* padding: 2%; */
 }
 
-.projects-title-svgid{
+.builds-title-svgid{
     margin-top: 50px;
     margin-left:20%;
     width: 60%;
@@ -144,7 +144,7 @@ svg{
 
 /* second navbar */
 
-    .select-category-projects > a {
+    .select-category-builds > a {
         font-size: 2.2rem;
         padding-right: 0px;
         padding-left: 0px;
@@ -155,18 +155,18 @@ svg{
     }
 
         /* navbar category selection */
-    .select-category-projects{
+    .select-category-builds{
         margin-top: 57px;
     }
 
-    .projects-title-svgid{
+    .builds-title-svgid{
         margin-top: 50px;
         margin-left: -20%;
         width: 100%;
         /* border: green solid 2px; */
     }
 
-    .projects-title-svg{
+    .builds-title-svg{
         position: fixed;
     }
 
@@ -182,7 +182,7 @@ svg{
     }
 
     /* entire container for images */
-    #projects-imgcard-mobile{
+    #builds-imgcard-mobile{
         /* border: 1px solid blue; */
         margin-top: 10px;
         flex-basis: 100%;
@@ -201,7 +201,7 @@ svg{
 
     /* description of category */
 
-    #projects-dcard-mobile{
+    #builds-dcard-mobile{
         /* border: red solid 2px; */
         position: fixed;
         top: 0;
@@ -221,7 +221,7 @@ svg{
     }
 
     /* additional nav for category */
-    .select-category-projects {
+    .select-category-builds {
     background-color: #000;
     display: block;
     padding: 1em 0;
@@ -266,19 +266,19 @@ svg{
 
     /* second navbar */
     
-        .select-category-projects > a {
+        .select-category-builds > a {
             /* border: 2px solid red; */
             display: none;
         }
     
             /* navbar category selection */
-        .select-category-projects{
+        .select-category-builds{
             border: 2px solid blue;
             display: none;
         }
         
                 
-        .projects-title-svg{
+        .builds-title-svg{
             zoom: 3;
             position: absolute;
             top: -50%;

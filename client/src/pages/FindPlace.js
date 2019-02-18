@@ -15,7 +15,7 @@ class FindPlace extends Component {
       placesArray: [],
       click: true,
       description: "Get description by clicking on places",
-      projectURL: "",
+      buildURL: "",
       spacingForplaces: "",
       last_name: "",
       first_name: "",
@@ -37,10 +37,10 @@ class FindPlace extends Component {
       .catch(err => console.log(err));
   };
 
-  //getProjectinfo
-  getPlacesInfo = (description, projectURL, spacingForplaces, last_name, first_name, technologies_used) => {
+  //getbuildinfo
+  getPlacesInfo = (description, buildURL, spacingForplaces, last_name, first_name, technologies_used) => {
     this.setState({description: description});
-    this.setState({projectURL: projectURL});
+    this.setState({buildURL: buildURL});
     this.setState({spacingForplaces: spacingForplaces});
     this.setState({last_name: last_name});
     this.setState({first_name: first_name});
@@ -50,7 +50,7 @@ class FindPlace extends Component {
 
   render() {
     return (
-      //Projectpage
+      //buildpage
       <div className="Bookingpage">
         <div className="heroplaces">
             {/* whole page container */}
@@ -77,9 +77,9 @@ class FindPlace extends Component {
                             picsrc = {item.imageUrl}
                             description = {item.description}
                             technologies_used = {item.technologies_used}
-                            spacingForProject = {item.spacingForProject}
-                            projectURL = {item.projectURL}
-                            //getProjectinfo
+                            spacingForBuild = {item.spacingForBuild}
+                            buildURL = {item.buildURL}
+                            //getbuildinfo
                             getPlacesInfo={this.getPlacesInfo}
                           />
                         </Grid>
@@ -103,7 +103,7 @@ class FindPlace extends Component {
                             </div>
                             <div className="button-places-deploy">
                               <Button id="button-category">
-                                <a href={this.state.projectURL}>
+                                <a href={this.state.buildURL}>
                                   Book
                                 </a>
                               </Button>

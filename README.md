@@ -10,7 +10,7 @@ An article on how the server is setup with JWT can be found [here](https://hptec
 
 The front end has been setup to use JWT as a way of authenticating users and routes. To understand it's structure better please refer to the following article [here](https://hptechblogs.com/using-json-web-token-react/)
 
-Please feel free to modify this code in anyway you see fit for your project. It is a boilerplate setup that tries to make sure you can get something up and running without having to worry about setting up user authentication from scratch.
+Please feel free to modify this code in anyway you see fit for your build. It is a boilerplate setup that tries to make sure you can get something up and running without having to worry about setting up user authentication from scratch.
 I highly suggest you read the articles before jumping in so you can have an better understanding of how everything works in the code. 
 
 Server-side article and using JWT: https://hptechblogs.com/using-json-web-token-for-authentication/
@@ -19,7 +19,7 @@ Front End article on using the JWT on a react application: https://hptechblogs.c
 
 ## Starting the app locally
 
-First off make sure you have a local version of MongoDB running on your machine. This project will make a local database for you called `appDB`.
+First off make sure you have a local version of MongoDB running on your machine. This build will make a local database for you called `appDB`.
 
 ```
 mongod
@@ -43,7 +43,7 @@ That's it, your app should be running on <http://localhost:3000>. The Express se
 
 ### Create a Git Repo
 
-Once you're ready to deploy, start by making sure your project is a git repository. If so, proceed to the next section, otherwise run the following commands in your terminal:
+Once you're ready to deploy, start by making sure your build is a git repository. If so, proceed to the next section, otherwise run the following commands in your terminal:
 
 ```
 git init

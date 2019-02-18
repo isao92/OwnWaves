@@ -14,7 +14,7 @@ const styles = {
   media: {
     height: 400,
   },
-  cardProjectTitle:{
+  cardBuildTitle:{
     textAlign: "center"
 
   }
@@ -24,19 +24,19 @@ const styles = {
 function MediaCard1(props) {
   const { classes } = props;
   return (
-    //getprojectinfo order or props matters*
+    //getbuildinfo order or props matters*
     
       
-      <Card className={classes.card} id="project-image-card" onClick={() => props.getPlacesInfo(props.description, props.projectURL, props.spacingForProject, props.last_name, props.first_name, props.technologies_used)}>
+      <Card className={classes.card} id="build-image-card" onClick={() => props.getPlacesInfo(props.description, props.buildURL, props.spacingForBuild, props.last_name, props.first_name, props.technologies_used)}>
 
       
-        <section id={props.spacingForProject}></section>
+        <section id={props.spacingForBuild}></section>
         <CardActionArea id="clickable-image-category">
         
-          <CardContent className={classes.cardProjectTitle} id="project-image-title" style={{position: "absolute"}}>
+          <CardContent className={classes.cardBuildTitle} id="build-image-title" style={{position: "absolute"}}>
             <p>{props.first_name} {' '} {props.last_name}</p>
           </CardContent>
-          <CardMedia id="projects-screenshots-mobile"
+          <CardMedia id="builds-screenshots-mobile"
             className={classes.media}
             image= {props.picsrc}
             title= {props.pictitle}

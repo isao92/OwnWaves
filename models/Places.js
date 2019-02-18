@@ -23,10 +23,10 @@ const Schema = mongoose.Schema;
             type: String,
             required: true
         },
-        projectURL:{
+        buildURL:{
             type: String,
         },
-        spacingForProject: {
+        spacingForBuild: {
             type: String,
         },
         technologies_used:{

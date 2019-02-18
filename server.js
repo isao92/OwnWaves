@@ -91,40 +91,40 @@ app.use(function (err, req, res, next) {
 
 const placesSeed = [
   {
-    first_name: "Living Room (Home Studio)",
-      last_name: "Acoustic Panels included",
-      description: 'We are a family friendly environment, and this room is available only on the weekends from Friday to Sunday.',
-      technologies_used: "Acoustic treatment greatly reduces noise but there is still a small amount of noise.",
+    first_name: "Home Garage",
+      last_name: "Soundproofed",
+      description: 'We are a family friendly environment, and this garage is available only on the weekends from Friday to Sunday.',
+      technologies_used: "Located at Normal Heights by the 805.",
       imageUrl: "./assets/images/bluehouse.jpg",
-      projectURL: "/findPlace1",
-      spacingForProject: "0"
+      buildURL: "/HomeStudio",
+      spacingForBuild: "0"
   },
   {
-    first_name: "Three Room Studio (The Threes)",
-      last_name: "Professional Acoustic Panels included",
-      description: 'We have this entire thre room studio available, and this room is a full week booking minimum.',
-      technologies_used: "Acoustic treatment is professional grade, music basic gear included and more.",
+    first_name: "Three Room Studio",
+      last_name: "Professionally soundproofed",
+      description: 'We have this entire three room studio available, you have the option to book individual rooms or the entire house. Required to book by week',
+      technologies_used: "Located at La Jolla.",
       imageUrl: "./assets/images/modern-house1.jpg",
-      projectURL: "/findPlace2",
-      spacingForProject: "1"
+      buildURL: "/ThreeRoomStudio",
+      spacingForBuild: "1"
   },
   {
     first_name: "Small Apartment Studio",
-      last_name: "No Acoustic Treatment",
+      last_name: "No soundproof",
       description: 'Hi we are in the bottom floor perfect for acoustic calm recording sessions during the day, I play drums here and neighbors are totally cool with it so feel free to book single day sessions here on the weekends.',
-      technologies_used: "There's basic acoustic treatment",
+      technologies_used: "Located in Chula Vista",
       imageUrl: "./assets/images/apartment-studio1.jpg",
-      projectURL: "/findPlace3",
-      spacingForProject: "2"
+      buildURL: "/SmallApartmentStudio",
+      spacingForBuild: "2"
   },
   {
     first_name: "Multi Room House",
-      last_name: "Acoustic Panels included, plus sound blocking mats.",
-      description: "We are allowing musicians to individually book each room as either practice, teaching or recording sessions. Book quickly this place is very popular.",
-      technologies_used: "Professional sound blocking and ventilation at each room, yet there's a small amount of noise generated that comes from the other rooms.",
+      last_name: "Heavily soundproofed.",
+      description: "We are allowing musicians to individually book each room as either practice, teaching or recording sessions. We are pretty flexible we do one day to full month bookings.",
+      technologies_used: "Located in El Cajon.",
       imageUrl: "./assets/images/modern-onefloor.jpg",
-      projectURL: "/findPlace4",
-      spacingForProject: "3"
+      buildURL: "/MultiRoomHouse",
+      spacingForBuild: "3"
   },
 ]
 
@@ -148,7 +148,7 @@ app.get("/api/places", (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
-// get one projects by id
+// get one builds by id
 app.get("/api/places/:id", (req, res) =>{
   db.Places
   .findById({_id: req.params.id})
@@ -166,7 +166,7 @@ app.post("/api/places", (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
-// update a document in projects collection using its id
+// update a document in builds collection using its id
 app.put("/api/places/:id", (req, res) =>{
   db.Places
   .findOneAndUpdate({_id: req.params.id}, req.body)
@@ -174,7 +174,7 @@ app.put("/api/places/:id", (req, res) =>{
   .catch(err => res.status(422).json(err));
 });
 
-// delete a record in projects collection using its id
+// delete a record in builds collection using its id
 app.delete("/api/places/:id", (req, res) =>{
   db.Places
   .findById({_id: req.params.id})
@@ -184,15 +184,15 @@ app.delete("/api/places/:id", (req, res) =>{
 });
 
 // Code to seed places collection
-const projectsSeed = [
+const buildsSeed = [
   {
       first_name: "Rental",
       last_name: "Space",
       description: 'Choose your vibe, your zone, your environment, studio, garage, backyard. Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone.',
       technologies_used: "Every place comes with electricity and a toilet. Click below to learn more.",
       imageUrl: "./assets/images/garage-with-motorbike.jpg",
-      projectURL: "/findPlace",
-      spacingForProject: "1"
+      buildURL: "/findPlace",
+      spacingForBuild: "1"
   },
   {
     first_name: "Vocal",
@@ -200,8 +200,8 @@ const projectsSeed = [
     description: "Second most important in a studio, wether you're a pop, hiphop, grunge artist, capturing that unique voice with the appropiate microphone changes the game.",
     technologies_used: "These mics come with a stand, case, pop filter (must use), and cables.",
     imageUrl: "./assets/images/vocals-mic.jpg",
-    projectURL: "/VocalEquipment",
-    spacingForProject: "2"
+    buildURL: "/VocalEquipment",
+    spacingForBuild: "2"
   },
   {
       first_name: "Keyboards",
@@ -209,8 +209,8 @@ const projectsSeed = [
       description: "Browse through the collection of keyboards and MIDI keyboards available for rental and start making your own waves of sound.",
       technologies_used: "All keyboards come with a case, stand, sustain pedal and cables.",
       imageUrl: "./assets/images/keyboard.jpg",
-      projectURL: "/KeyboardEquipment",
-      spacingForProject: "3"
+      buildURL: "/KeyboardEquipment",
+      spacingForBuild: "3"
   },
   {
       first_name: "Guitars",
@@ -218,8 +218,8 @@ const projectsSeed = [
       description: "Usually every guitar player has his own guitar but some might be interested in recording a specific one either modern or rare.",
       technologies_used: "Guitar are provided with strap, pick ups and cables.",
       imageUrl: "./assets/images/electric-guitar.jpg",
-      projectURL: "/Guitars",
-      spacingForProject: "4"
+      buildURL: "/Guitars",
+      spacingForBuild: "4"
   },
   {
       first_name: "Drums",
@@ -227,14 +227,14 @@ const projectsSeed = [
       description: "Pick your ground shaking, boom generator, sound splashing machine with caution!",
       technologies_used: "These drums come with everything including the seat and mat :)",
       imageUrl: "./assets/images/drums-rumandshark.jpg",
-      projectURL: "/Drums",
-      spacingForProject: "5"
+      buildURL: "/Drums",
+      spacingForBuild: "5"
   }
 ];
 
-db.Projects
+db.Builds
 .deleteMany({})
-.then(() => db.Projects.collection.insertMany(projectsSeed))
+.then(() => db.Builds.collection.insertMany(buildsSeed))
 .then(data => {
   console.log(data.result.n + " records inserted!");
 })
@@ -243,52 +243,52 @@ db.Projects
 });
 // END seed code
 
-// back-end api routes for projects collection
-// get json of all documents in projects collection
-app.get("/api/projects", (req, res) => {
-  db.Projects
+// back-end api routes for builds collection
+// get json of all documents in builds collection
+app.get("/api/builds", (req, res) => {
+  db.Builds
     .find({})
     .then(datafoo => res.json(datafoo))
     .catch(err => res.status(400).json(err));
 });
 
-// get one projects by id
-app.get("/api/projects/:id", (req, res) =>{
-  db.Projects
+// get one builds by id
+app.get("/api/builds/:id", (req, res) =>{
+  db.Builds
   .findById({_id: req.params.id})
   .then(datafoo=>datafoo.remove())
   .then(datafoo => res.json(datafoo))
   .catch(err => res.status(422).json(err));
 }),
 
-// create new projects document
-app.post("/api/projects", (req, res) => {
-  db.Projects
+// create new builds document
+app.post("/api/builds", (req, res) => {
+  db.Builds
     .create(req.body)
     .then(datafoo => res.json(datafoo))
     .catch(err => res.status(400).json(err));
 });
 
-// get one document in projects collection using its id
-app.get("/api/projects/:id", (req, res) =>{
-  db.Projects
+// get one document in builds collection using its id
+app.get("/api/builds/:id", (req, res) =>{
+  db.Builds
   .findById({_id: req.params.id})
   .then(datafoo=>datafoo.remove())
   .then(datafoo => res.json(datafoo))
   .catch(err => res.status(422).json(err));
 }),
 
-// update a document in projects collection using its id
-app.put("/api/projects/:id", (req, res) =>{
-  db.Projects
+// update a document in builds collection using its id
+app.put("/api/builds/:id", (req, res) =>{
+  db.Builds
   .findOneAndUpdate({_id: req.params.id}, req.body)
   .then(datafoo => res.json(datafoo))
   .catch(err => res.status(422).json(err));
 }),
 
-// delete a record in projects collection using its id
-app.delete("/api/projects/:id", (req, res) =>{
-  db.Projects
+// delete a record in builds collection using its id
+app.delete("/api/builds/:id", (req, res) =>{
+  db.Builds
   .findById({_id: req.params.id})
   .then(datafoo=>datafoo.remove())
   .then(datafoo => res.json(datafoo))

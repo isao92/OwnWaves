@@ -14,7 +14,8 @@ const styles = theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    marginTop: 30
+    marginTop: 30,
+    backgroundColor: 'white'
   },
   margin: {
     margin: theme.spacing.unit,
@@ -39,7 +40,7 @@ const ranges = [
   },
 ];
 
-class OutlinedInputAdornments extends React.Component {
+class InputFields extends React.Component {
   state = {
     amount: '',
     password: '',
@@ -143,8 +144,8 @@ class OutlinedInputAdornments extends React.Component {
   }
 }
 
-OutlinedInputAdornments.propTypes = {
+InputFields.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(OutlinedInputAdornments);
+export default withStyles(styles)(InputFields);
