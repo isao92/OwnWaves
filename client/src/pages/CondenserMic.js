@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
-import ImagesCard from '../components/ImagesCard/ImagesCard';
-import DescriptionRental from '../components/DescriptionRental/DescriptionRental';
+import ImagesCardMic from '../components/ImagesCard/ImagesCardMic';
+import DescriptionMic from '../components/DescriptionRental/DescriptionMic';
 import Request from './Request';
 import "./ThreeRoomStudio.css";
 
 
 
-class ThreeRoomStudio extends Component {
+class CondenserMic extends Component {
 
   render() {
     return (
@@ -198,7 +198,7 @@ class ThreeRoomStudio extends Component {
                 {/* spacing */}
                 <Grid item xs={12}>
                 <div className="imagescard-div" id="imagescard-div-id">
-                    <ImagesCard/>
+                    <ImagesCardMic/>
                 </div>
                 </Grid>
 
@@ -206,7 +206,7 @@ class ThreeRoomStudio extends Component {
                 <Grid item xs={1}></Grid>
 
                 <Grid item xs={5} >
-                <DescriptionRental/> 
+                <DescriptionMic/> 
                 </Grid>
 
                 <Grid item xs={5}>
@@ -230,6 +230,6 @@ class ThreeRoomStudio extends Component {
     }
   };
 
-  export default ThreeRoomStudio;
+  export default CondenserMic;
 
 

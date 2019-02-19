@@ -23,37 +23,37 @@ const styles = theme => ({
   },
 });
 
-function SubheaderDividers(props) {
+function DescriptionMic(props) {
   const { classes } = props;
   return (
     <List className={classes.root}>
       <ListItem>
-        <ListItemText className="description-rental-text" primary="Address" secondary="123 Madeup St, La Jolla, CA"/>
+        <ListItemText className="description-rental-text" primary="Address" secondary="321 This Street, Chula Vista, CA"/>
       </ListItem>
       <Divider component="li" />
       <li>
         <Typography className={classes.dividerFullWidth} color="textSecondary" variant="caption">
-          3 day min
+          2 day min
         </Typography>
       </li>
       <ListItem>
-        <ListItemText className="description-rental-text" primary="$180 a day" secondary="Available starting March 7, 2019" />
+        <ListItemText className="description-rental-text" primary="$40 a day" secondary="Available starting March 1, 2019" />
       </ListItem>
       <Divider component="li" variant="inset" />
       <li>
         <Typography className={classes.dividerFullWidth} color="textSecondary" variant="caption">
-          Amenities
+         Additional Details
         </Typography>
       </li>
       <ListItem>
-        <ListItemText className="description-rental-text" primary="Professional Acoustic Treatment" secondary="Air conditioning, Heating, Outdoor Pool and Outdoor Patio" />
+        <ListItemText className="description-rental-text" primary="Shock Mount" secondary="Metallic Pop Filter" />
       </ListItem>
     </List>
   );
 }
 
-SubheaderDividers.propTypes = {
+DescriptionMic.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SubheaderDividers);
+export default withStyles(styles)(DescriptionMic);
