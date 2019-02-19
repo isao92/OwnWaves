@@ -89,6 +89,138 @@ app.use(function (err, req, res, next) {
   }
 });
 
+// --------------------------------------------------------------------------------------
+
+// request part
+const requestSeed = [
+  {
+    requestNumDays: 11,
+    userEmail: 'Michael@michael.com',
+    UserNameOfRequest: "Michael Spencer",
+    PhoneOfRequest: 6195495495,
+    DateOfRequest: '2019-02-27',
+  }
+]
+
+// clear and reinsert request to database
+db.Request.deleteMany({}).then(() => db.Request.collection.insertMany(requestSeed)).then(data => {
+  console.log(data.result.n + " records inserted!");
+}).catch(err => {
+  console.error(err);
+});
+
+// get json of all documents in Request collection
+app.get("/api/request", (req, res) => {
+  db.Request
+    .find({})
+    .then(datafoo => res.json(datafoo))
+    .catch(err => res.status(400).json(err));
+});
+
+// Search Request
+app.get("/api/request/:requestNumDaysber", (req, res) => {
+  const { requestNumDaysber } = req.params;
+
+  db.request.find({ where: { requestNumDays: requestNumDaysber }})
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(400).json(err));
+});
+
+// Request ROUTE
+app.post('/api/request', (req, res) => {
+  console.log(req.body);
+  db.Request
+  .create(req.body)
+  .then(dbRequest => res.json(dbRequest))
+  .catch(err => res.status(400).json(err));
+});
+
+// update a document in Request collection using its id
+app.put("/api/request/:id", (req, res) =>{
+  db.Request
+  .findOneAndUpdate({_id: req.params.id}, req.body)
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+}),
+
+// delete a record in Request collection using its id
+app.delete("/api/request/:id", (req, res) =>{
+  db.Request
+  .findById({_id: req.params.id})
+  .then(datafoo=>datafoo.remove())
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+})
+
+// ---------------------------------------------------------------
+
+
+// rent part
+const rentSeed = [
+  {
+    rentNumDays: 11,
+    userEmail: 'Michael@michael.com',
+    UserNameOfrent: "Michael Spencer",
+    PhoneOfrent: 6195495495,
+    DateOfrent: '2019-02-27',
+  }
+]
+
+// clear and reinsert rent to database
+db.Rent.deleteMany({}).then(() => db.Rent.collection.insertMany(rentSeed)).then(data => {
+  console.log(data.result.n + " records inserted!");
+}).catch(err => {
+  console.error(err);
+});
+
+// get json of all documents in rent collection
+app.get("/api/rent", (req, res) => {
+  db.Rent
+    .find({})
+    .then(datafoo => res.json(datafoo))
+    .catch(err => res.status(400).json(err));
+});
+
+// Search rent
+app.get("/api/rent/:rentNumDaysber", (req, res) => {
+  const { rentNumDaysber } = req.params;
+
+  db.Rent.find({ where: { rentNumDays: rentNumDaysber }})
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(400).json(err));
+});
+
+// rent ROUTE
+app.post('/api/rent', (req, res) => {
+  console.log(req.body);
+  db.Rent
+  .create(req.body)
+  .then(dbrent => res.json(dbrent))
+  .catch(err => res.status(400).json(err));
+});
+
+// update a document in rent collection using its id
+app.put("/api/rent/:id", (req, res) =>{
+  db.Rent
+  .findOneAndUpdate({_id: req.params.id}, req.body)
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+}),
+
+// delete a record in rent collection using its id
+app.delete("/api/rent/:id", (req, res) =>{
+  db.Rent
+  .findById({_id: req.params.id})
+  .then(datafoo=>datafoo.remove())
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+})
+
+
+// ------------------------------------------------------
+
+
+
 const placesSeed = [
   {
     first_name: "Home Garage",
@@ -183,7 +315,108 @@ app.delete("/api/places/:id", (req, res) =>{
   .catch(err => res.status(422).json(err));
 });
 
-// Code to seed places collection
+// -----------------------------------------------------------------------------------------
+
+
+const micsSeed = [
+  {
+    first_name: "Condenser",
+      last_name: "Mics",
+      description: 'Check out Condenser Microphones from people like you.',
+      technologies_used: "Sensitive microphones with high responsiveness.",
+      imageUrl: "./assets/images/vocals-mic.jpg",
+      buildURL: "/CondenserMic",
+      spacingForBuild: "0"
+  },
+  {
+    first_name: "Dynamic",
+      last_name: "Microphones",
+      description: 'Check out Dynamic Microphones and ',
+      technologies_used: "Multipurpose microphones.",
+      imageUrl: "./assets/images/dynamic-mic-a.jpg",
+      buildURL: "/DynamicMic",
+      spacingForBuild: "1"
+  },
+  {
+    first_name: "Quality",
+      last_name: "Microphones A",
+      description: 'These are higher quality studio Microphones for optimal performance',
+      technologies_used: "High frequency response microhpones",
+      imageUrl: "./assets/images/neuman-mic.jpg",
+      buildURL: "/QualityMics",
+      spacingForBuild: "2"
+  },
+  {
+    first_name: "Drum Mics",
+      last_name: "Various",
+      description: "Snare, kick and cymbal mics,.",
+      technologies_used: "Dynamic and resistant microphones.",
+      imageUrl: "./assets/images/drum-mics.jpg",
+      buildURL: "/DrumMics",
+      spacingForBuild: "3"
+  },
+]
+
+db.Mics
+.deleteMany({})
+.then(() => db.Mics.collection.insertMany(micsSeed))
+.then(data => {
+  console.log(data.result.n + " records inserted!");
+})
+.catch(err => {
+  console.error(err);
+});
+// END seed code
+
+// back-end api routes for mics collection
+// get json of all documents in mics collection
+app.get("/api/mics", (req, res) => {
+  db.Mics
+    .find({})
+    .then(datafoo => res.json(datafoo))
+    .catch(err => res.status(400).json(err));
+});
+
+// get one builds by id
+app.get("/api/mics/:id", (req, res) =>{
+  db.Mics
+  .findById({_id: req.params.id})
+  .then(datafoo=>datafoo.remove())
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+}),
+
+
+// create new mics document
+app.post("/api/mics", (req, res) => {
+  db.Mics
+    .create(req.body)
+    .then(datafoo => res.json(datafoo))
+    .catch(err => res.status(400).json(err));
+});
+
+// update a document in builds collection using its id
+app.put("/api/mics/:id", (req, res) =>{
+  db.Mics
+  .findOneAndUpdate({_id: req.params.id}, req.body)
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+});
+
+// delete a record in builds collection using its id
+app.delete("/api/mics/:id", (req, res) =>{
+  db.Mics
+  .findById({_id: req.params.id})
+  .then(datafoo=>datafoo.remove())
+  .then(datafoo => res.json(datafoo))
+  .catch(err => res.status(422).json(err));
+});
+
+
+
+// -----------------------------------------------------------------------------------------
+
+// Code to seed builds collection
 const buildsSeed = [
   {
       first_name: "Rental",
@@ -200,7 +433,7 @@ const buildsSeed = [
     description: "Second most important in a studio, wether you're a pop, hiphop, grunge artist, capturing that unique voice with the appropiate microphone changes the game.",
     technologies_used: "These mics come with a stand, case, pop filter (must use), and cables.",
     imageUrl: "./assets/images/vocals-mic.jpg",
-    buildURL: "/VocalEquipment",
+    buildURL: "/findMic",
     spacingForBuild: "2"
   },
   {
@@ -294,41 +527,6 @@ app.delete("/api/builds/:id", (req, res) =>{
   .then(datafoo => res.json(datafoo))
   .catch(err => res.status(422).json(err));
 }),
-
-
-// get json of all documents in Batch collection
-app.get("/api/batch", (req, res) => {
-  db.Batch
-    .find({})
-    .then(datafoo => res.json(datafoo))
-    .catch(err => res.status(400).json(err));
-});
-
-// create new BATCH document
-app.post("/api/batch", (req, res) => {
-  db.Batch
-    .create(req.body)
-    .then(datafoo => res.json(datafoo))
-    .catch(err => res.status(400).json(err));
-});
-
-// update a document in BATCH collection using its id
-app.put("/api/batch/:id", (req, res) =>{
-  db.Batch
-  .findOneAndUpdate({_id: req.params.id}, req.body)
-  .then(datafoo => res.json(datafoo))
-  .catch(err => res.status(422).json(err));
-}),
-
-// delete a record in BATCH collection using its id
-app.delete("/api/batch/:id", (req, res) =>{
-  db.Batch
-  .findById({_id: req.params.id})
-  .then(datafoo=>datafoo.remove())
-  .then(datafoo => res.json(datafoo))
-  .catch(err => res.status(422).json(err));
-}),
-
 
 // Send every request to the React app
 // Define any API routes before this runs

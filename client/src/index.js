@@ -12,11 +12,15 @@ import axios from "axios";
 // Our Components
 import Navbar from './components/Navbar';
 import BuildsPage from './pages/BuildsPage';
+import Request from './pages/Request';
 // import HomeStudio from './pages/HomeStudio';
 import ThreeRoomStudio from './pages/ThreeRoomStudio';
+import HomeStudio from './pages/HomeStudio';
+import CondenserMic from './pages/CondenserMic';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import FindPlace from './pages/FindPlace';
+import FindMic from './pages/FindMic';
 
 // when logged in
 import RentPage from './pages/RentPage';
@@ -40,9 +44,13 @@ ReactDOM.render(
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/findPlace" component={FindPlace} />
+            <Route exact path="/findMic" component={FindMic} />
             <Route exact path="/buildsPage" component={BuildsPage} />
+            <Route exact path="/Request" component={Request} />
             {/* <Route exact path="/HomeStudio" component={HomeStudio} /> */}
             <Route exact path="/ThreeRoomStudio" component={ThreeRoomStudio} />
+            <Route exact path="/HomeStudio" component={HomeStudio}/>
+            <Route exact path="/CondenserMic" component={CondenserMic}/>
         </div>
     </Router>
     , document.getElementById('root')
