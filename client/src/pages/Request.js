@@ -35,7 +35,6 @@ class Request extends Component {
           growth: res.data,
           uniqueID: res.data
         })
-
       })
       .catch(err => {
         alert(err.response.data.message)
@@ -49,7 +48,6 @@ class Request extends Component {
     });
   };
 
-  // Kat Search Request --------------------
   searchRequest = () => {
     
     // let { searchNumber } = this.state;
@@ -62,10 +60,8 @@ class Request extends Component {
       })
       .catch(err => console.log(err));
   };
-  // Kat Search Request --------------------
 
   render() {
-    // Kat Search Request --------------------
     const { requestes } = this.state;
     // let requestRows;
     if (requestes) {
@@ -182,10 +178,10 @@ class Request extends Component {
                               <div className="form-group">
                                 <label htmlFor="uniqueID">Item Name:</label>
                                 <input className="form-control"
-                                      placeholder="ItemID"
-                                      name="ItemID"
+                                      placeholder="itemID"
+                                      name="uniqueID"
                                       type="text"
-                                      id="ID"
+                                      id="uniqueID"
                                       onChange={this.handleChange}/>
                             </div>
                             
