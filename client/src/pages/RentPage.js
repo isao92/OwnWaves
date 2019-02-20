@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import API from "../utils/API";
-import axios from "axios";
 import withAuth from '../components/withAuth';
 // import './Login.css'
 // import {Link} from 'react-router-dom';
@@ -27,7 +26,7 @@ class Rent extends Component {
 
     API.startRent(this.state.rentTitle, this.state.rentItemName, this.state.NameOfRenter, this.state.EmailOfRenter, this.state.DateAvailable, this.state.RentItemPrice, this.state.uniqueID)
       .then(res => {
-        alert(`Added: ${res.data.UserNameOfRequest}`)
+        alert(`We will process your form ${res.data.NameOfRenter}`)
         this.setState({ 
           rentTitle: res.data,
           rentItemName: res.data,
@@ -51,20 +50,12 @@ class Rent extends Component {
     });
   };
 
-  searchRent = () => {
-    axios
-      .get(`/api/rent/`)
-      .then(data => {
-        this.setState({ rentes: data.data });
-      })
-      .catch(err => console.log(err));
-  };
-
   render() {
     const { rentes } = this.state;
-    let rentRows;
+    // let rentRows;
     if (rentes) {
-      rentRows = rentes.map(rent => {
+      // rentRows = rentes.map(rent => {
+        rentes.map(rent => {
         return (
           <div key={rent._id}
             style={{
@@ -113,16 +104,17 @@ class Rent extends Component {
           </div>
         );
       });
-    } else {
-      rentRows = <p>Loading...</p>;
-    }
+    } 
+    // else {
+    //   rentRows = <p>Loading...</p>;
+    // }
     // Kat Search Rent --------------------
 
     return (
       <div className="container">
 
 
-        <h1 className="RentingTitle">What Are You Renting?</h1>
+        <h1 className="RentingTitle" style={{marginTop: '65px'}}>What Are You Renting?</h1>
         <div className="row">
           <div className="col-sm-4">
 
@@ -186,24 +178,6 @@ class Rent extends Component {
                 <button type="submit" className="btn btn-primary">Submit</button>
               </form>
             </div>
-
-          
-          {/* <p><Link to="/signup">Go to Signup</Link></p> */}
-
-          <div className="col-sm-4">
-            {/* Kat Search Rent -------------------- */}
-            
-            <div style={{marginBottom: "10px"}}>
-              <label htmlFor="searchRent">Search all rental items: </label>
-              <br/>
-              <button onClick={this.searchRent} className="btn btn-primary">Search</button>
-              
-            </div>
-            
-            {rentRows}
-            {/* Kat Search Rent -------------------- */}
-
-          </div>
         </div>
       </div>
 

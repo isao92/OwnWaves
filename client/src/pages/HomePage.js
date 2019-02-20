@@ -173,7 +173,9 @@ function CenteredGrid(props) {
                           <Paper id="rent-homepage">
                             Sign up to rent your equipment.
                             <Button>
+                              <a href="/rentpage">
                               Rent
+                              </a>
                             </Button>
                           </Paper>
                         </Grid>
