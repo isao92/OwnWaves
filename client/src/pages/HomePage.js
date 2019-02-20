@@ -161,7 +161,7 @@ function CenteredGrid(props) {
                             
                             Create your own recording experience.
                             
-                            <Button>
+                            <Button style={{backgroundColor: 'white'}}>
                               <a href="/findPlace">
                               Book
                               </a>
@@ -172,7 +172,7 @@ function CenteredGrid(props) {
                         <Grid item xs={6}>
                           <Paper id="rent-homepage">
                             Sign up to rent your equipment.
-                            <Button>
+                            <Button style={{backgroundColor: 'white'}}>
                               <a href="/rentpage">
                               Rent
                               </a>

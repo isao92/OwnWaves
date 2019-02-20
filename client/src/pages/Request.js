@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 
 import API from "../utils/API";
 import axios from "axios";
-// import withAuth from '../components/withAuth';
-// import './Login.css'
 import {Link} from 'react-router-dom';
 
 class Request extends Component {
@@ -194,20 +192,9 @@ class Request extends Component {
 
             </div>
      
-          <p style={{marginLeft: '15%', marginTop: '15px'}}><Link to="/signup">Go to Signup</Link></p>
+          <p style={{marginLeft: '15%', marginTop: '15px'}}>Want to rent? -><Link to="/signup">Go to Signup</Link></p>
 
-          {/* <div className="col-sm-4">
-            
-            <div style={{marginBottom: "10px"}}>
-              <label htmlFor="PhoneOfRequest">Search all requestes: </label>
-              <br/>
-              <button onClick={this.searchRequest} className="btn btn-primary">Search</button>
-              
-            </div>
-            
-            {requestRows}
-
-          </div> */}
+          
         </div>
       </div>
 
@@ -215,6 +202,4 @@ class Request extends Component {
   }
 }
 
-// export default Request;
-// export default withAuth(Request);
 export default (Request);
