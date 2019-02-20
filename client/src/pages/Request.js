@@ -75,7 +75,7 @@ class Request extends Component {
               color: "#007bff",
               textDecoration: "underline",
               paddingLeft: 10,
-              marginBottom: 5
+              marginBottom: 5,
             }}
           >
             <div>
@@ -114,7 +114,7 @@ class Request extends Component {
     // }
 
     return (
-      <div className="container">
+      <div className="container" style={{marginTop: '0px'}}>
 
         <h1 className="RequestTitle">Request Information</h1>
         <div className="row">
