@@ -326,9 +326,7 @@ const micsSeed = [
       technologies_used: "Sensitive microphones with high responsiveness.",
       imageUrl: "./assets/images/vocals-mic.jpg",
       buildURL: "/CondenserMic",
-      spacingForBuild: "0",
-      itemID: "",
-
+      spacingForBuild: "0"
   },
   {
     first_name: "Dynamic",
@@ -337,8 +335,7 @@ const micsSeed = [
       technologies_used: "Multipurpose microphones.",
       imageUrl: "./assets/images/dynamic-mic-a.jpg",
       buildURL: "/DynamicMic",
-      spacingForBuild: "1",
-      itemID: ""
+      spacingForBuild: "1"
   },
   {
     first_name: "Quality",
@@ -347,8 +344,7 @@ const micsSeed = [
       technologies_used: "High frequency response microhpones",
       imageUrl: "./assets/images/neuman-mic.jpg",
       buildURL: "/QualityMics",
-      spacingForBuild: "2",
-      itemID: ""
+      spacingForBuild: "2"
   },
   {
     first_name: "Drum Mics",
@@ -357,8 +353,7 @@ const micsSeed = [
       technologies_used: "Dynamic and resistant microphones.",
       imageUrl: "./assets/images/drum-mics.jpg",
       buildURL: "/DrumMics",
-      spacingForBuild: "3",
-      itemID: ""
+      spacingForBuild: "3"
   },
 ]
 

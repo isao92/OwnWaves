@@ -114,7 +114,7 @@ class Rent extends Component {
       <div className="container">
 
 
-        <h1 className="RentingTitle" style={{marginTop: '65px'}}>What Are You Renting?</h1>
+        <h1 className="RentingTitle" style={{marginTop: '65px', paddingTop: '15px'}}>What Are You Renting?</h1>
         <div className="row">
           <div className="col-sm-4">
 
@@ -164,7 +164,7 @@ class Rent extends Component {
                         id="DateOfRent"
                         onChange={this.handleChange}/>
                 </div>
-                <div className="form-group">
+                <div className="form-group" style={{marginBottom: '500px'}}>
                   <label htmlFor="RentItemPrice">Price:</label>
                   <input className="form-control"
                         placeholder="$123"
