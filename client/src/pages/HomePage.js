@@ -131,14 +131,14 @@ function CenteredGrid(props) {
           </Grid>
           
           {/* create your own experience */}
-          <Grid item xs={8} id="main-middlecard-homepage">
+          <Grid item xs={8} id="main-middlecard-homepage" style={{padding: '0px'}}>
             <Grid item xs={12} id="grid-homepage">
 
             
                     <Paper className="paper-section" id="paper-section" >
                       
-                      <div className="paper-title-homepage">
-                      Create your own experience.
+                      <div className="paper-title-homepage" style={{textAlign: 'center'}}>
+                      Create your OWN experience.
                       </div>
                       
                       <hr></hr>
@@ -147,8 +147,8 @@ function CenteredGrid(props) {
                               So how does it work?
                             </div>
                             <div className="explanation-text-homepage">
-                              "If you want to go far do it yourself, if you want to go farther work in a team" - Travis. <br/> 
-                              Our potential comes thanks to local artists and people like you that provide space or allow others to rent equipment in order to give them the opportunity to create their OWN personalized studio environment. 
+                              "If you want to go far do it yourself, if you want to go farther work in a team" - Travis T. <br/> 
+                              Our potential comes thanks to local artists and people like you that provide space or allow others to rent equipment in order to give them the opportunity to create their own personalized studio environment. 
                               Click here to learn more!
 
                             </div>
@@ -157,27 +157,32 @@ function CenteredGrid(props) {
                       <Grid container spacing={8}>
 
                         <Grid item xs={6}>
-                          <Paper id="book-homepage">
+                          <div id="book-homepage">
                             
                             Create your own recording experience.
                             
                             <Button style={{backgroundColor: 'white'}}>
                               <a href="/findPlace">
-                              Book
+                              Book a place
                               </a>
                             </Button>
-                          </Paper>
+                            <Button style={{backgroundColor: 'white'}}>
+                              <a href="/buildsPage">
+                              Rent equipment
+                              </a>
+                            </Button>
+                          </div>
                         </Grid>
 
                         <Grid item xs={6}>
-                          <Paper id="rent-homepage">
+                          <div id="rent-homepage">
                             Sign up to rent your equipment.
                             <Button style={{backgroundColor: 'white'}}>
-                              <a href="/rentpage">
+                              <a href="/signup">
                               Rent
                               </a>
                             </Button>
-                          </Paper>
+                          </div>
                         </Grid>
 
                       </Grid>
@@ -219,7 +224,8 @@ function CenteredGrid(props) {
         </Grid>
       
       </div>
-      <div className="footer">2019</div>
+
+      <div className="footer">Copyright 2019</div>
     </div>
   );
 }
