@@ -423,7 +423,7 @@ const buildsSeed = [
       last_name: "Space",
       description: 'Choose your vibe, your zone, your environment, studio, garage, backyard. Feel free to browse at all the current places available and consider that each place will give you a different acoustic tone.',
       technologies_used: "Every place comes with electricity and a toilet. Click below to learn more.",
-      imageUrl: "./assets/images/garage-with-motorbike.jpg",
+      imageUrl: "./assets/images/apartment-studio1.jpg",
       buildURL: "/findPlace",
       spacingForBuild: "1"
   },

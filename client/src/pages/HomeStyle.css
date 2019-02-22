@@ -1,7 +1,8 @@
 body, html{
     color: black;
-    background-color: #b3e9ff9d;
-    width: 100%
+    /* background-color: #b3e9ff9d; */
+    width: 100%;
+    height: 100%;
 }
 
 html { 
@@ -59,33 +60,38 @@ background-repeat: no-repeat;
 
 .explanation-title-homepage{
     font-size: 2.6rem;
-    font-family: 'Anton', sans-serif;
     text-align: center;
 }
 
 .explanation-text-homepage{
-
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 1.7rem;
-    padding: 2%;
 }
 
 
 /* footer */
 .footer{
     width: 100%;
+    bottom: 0;
+    position: fixed;
     text-align: center;
 }
 
 /* big middle card */
 .paper-section, .paper-title-homepage {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     padding-top: 12px;
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 1%;
-    margin-left: 2%;
-    margin-right: 2%;
+    /* margin-left: 2%;
+    margin-right: 2%; */
     margin-bottom: 1%;
     z-index: 50;
 }
@@ -105,8 +111,8 @@ background-repeat: no-repeat;
     text-align: center;
     font-size: 1.5rem;
     padding: 2%;
-    background-color: rgba(240, 248, 255, 0.808);
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+    background-color: none;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 0px 0px 0px rgba(0,0,0,0.12);
 }
 
 
@@ -116,9 +122,8 @@ background-repeat: no-repeat;
 }
 
 #paper-section{
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.85);
     margin-top: 9%;
-    margin-bottom: 20%;
     
 }
 
@@ -298,6 +303,12 @@ background-repeat: no-repeat;
 
 }
 @media (min-width:1000px){
+    
+    /* maing logo bigger margintop */
+    .homePage-main-logo{
+        margin-top: 8%;
+        margin-left: -2%;
+    }
 
     html{
         font-size: 9px;

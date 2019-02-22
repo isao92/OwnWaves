@@ -35,7 +35,7 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="container" style={{marginTop: '100px', paddingBottom: '70%', fontSize: '2rem', width: '50%'}}>
+      <div className="container" style={{marginTop: '60px', paddingBottom: '70%', fontSize: '2rem', width: '50%'}}>
 
         <h1 style={{fontSize: '3rem'}}>Signup</h1>
         <form onSubmit={this.handleFormSubmit}>
