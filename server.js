@@ -30,7 +30,7 @@ mongoose.set('useCreateIndex', true);
 
 // Init the express-jwt middleware
 const isAuthenticated = exjwt({
-  secret: process.env.REACT_APP_JWT_SECRET_CODE
+  secret: process.env.REACT_APP_MONGO_PASSWORD
 });
 
 
@@ -41,7 +41,7 @@ app.post('/api/login', (req, res) => {
   }).then(user => {
     user.verifyPassword(req.body.password, (err, isMatch) => {
       if(isMatch && !err) {
-        let token = jwt.sign({ id: user._id, email: user.email }, process.env.REACT_APP_JWT_SECRET_CODE, { expiresIn: 129600 }); // Sigining the token
+        let token = jwt.sign({ id: user._id, email: user.email }, process.env.REACT_APP_MONGO_PASSWORD, { expiresIn: 129600 }); // Sigining the token
         res.json({success: true, message: "Token Issued!", token: token, user: user});
       } else {
         res.status(401).json({success: false, message: "Authentication failed. Wrong password."});
