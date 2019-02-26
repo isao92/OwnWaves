@@ -63,7 +63,7 @@
 
 /* second navbar */
     .image-description-container{
-        border: 2px solid red;
+        /* border: 2px solid red; */
         flex-basis: 100%;
         max-width: 100%;
         width: 100%;

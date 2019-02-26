@@ -4,10 +4,12 @@ export default {
   getUser: (id) => {
     return axios.get(`/api/user/${id}`);
   },
+
   // sign up a user to our service
   signUpUser: (username, email, password) => {
     return axios.post('api/signup', {username: username, email: email, password: password});
   },
+  
   // get all builds documents as array of objects
   getAllBuilds: () => {
     return axios.get(`/api/builds`);
@@ -54,7 +56,7 @@ export default {
   },
 
 
-  
+  // ----------- REQUESTS --------------
   // get data associated with one request id
   searchRequest: (id) => {
     return axios.get(`/api/request/${id}`);
@@ -77,30 +79,58 @@ export default {
     }); 
   },
 
+  // -------------------------------------
 
-
-  
+// ------------------- RENTS ---------------
   // get data associated with one request id
   searchRent: (id) => {
     return axios.get(`/api/rent/${id}`);
   },
   
-  // get request of all requestes
+  // get request of all rentals
   getAllRent: () => {
     return axios.get(`/api/rent`);
   },
 
-  // start a new request document (use on Admin page)
-  startRent: (rentTitle, RentItemName, NameOfRenter, EmailRenter, DateAvailable, RentItemPrice, uniqueID) => {
+  // get request of all rentals
+  getAllUserRent: (id) => {
+    return axios.get(`/api/rent/${id}`);
+  },
+
+  // create the rental item in rents collection
+  startRent: (rentTitle, rentItemName, nameOfRenter, emailRenter, dateAvailable, rentItemPrice, uniqueID) => {
     return axios.post('api/rent', {
       rentTitle: rentTitle,
-      RentItemName: RentItemName,
-      NameOfRenter: NameOfRenter,
-      EmailRenter: EmailRenter,
-      DateAvailable: DateAvailable,
-      RentItemPrice: RentItemPrice,
+      rentItemName: rentItemName,
+      nameOfRenter: nameOfRenter,
+      emailRenter: emailRenter,
+      dateAvailable: dateAvailable,
+      rentItemPrice: rentItemPrice,
       uniqueID: uniqueID
     }); 
+  },
+
+  // create rental for user profile
+  startRentUser: (id, rentTitle, rentItemName) => {
+    console.log('hello');
+    return axios.put(`api/signup/${id}`, {
+      rentsArray:{id, rentTitle: rentTitle, rentItemName: rentItemName}
+    }); 
+  },
+
+
+  
+  // add rent info from user
+  addRentFromUser: (rentTitle, rentItemName, nameOfRenter, emailRenter, dateAvailable, rentItemPrice, uniqueID) => {
+    return axios.push('api/user/rentsArray', {
+      rentTitle: rentTitle,
+      rentItemName: rentItemName,
+      nameOfRenter: nameOfRenter,
+      emailRenter: emailRenter,
+      dateAvailable: dateAvailable,
+      rentItemPrice: rentItemPrice,
+      uniqueID: uniqueID
+    });
   },
 
 

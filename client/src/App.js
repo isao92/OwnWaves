@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Home from "./pages/HomePage"
+import Home from "./components/HomePage";
 import './App.css';
 
 

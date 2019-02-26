@@ -30,7 +30,7 @@ mongoose.set('useCreateIndex', true);
 
 // Init the express-jwt middleware
 const isAuthenticated = exjwt({
-  secret: 'all sorts of code up in here'
+  secret: process.env.REACT_APP_JWT_SECRET_CODE
 });
 
 
@@ -41,7 +41,7 @@ app.post('/api/login', (req, res) => {
   }).then(user => {
     user.verifyPassword(req.body.password, (err, isMatch) => {
       if(isMatch && !err) {
-        let token = jwt.sign({ id: user._id, email: user.email }, 'all sorts of code up in here', { expiresIn: 129600 }); // Sigining the token
+        let token = jwt.sign({ id: user._id, email: user.email }, process.env.REACT_APP_JWT_SECRET_CODE, { expiresIn: 129600 }); // Sigining the token
         res.json({success: true, message: "Token Issued!", token: token, user: user});
       } else {
         res.status(401).json({success: false, message: "Authentication failed. Wrong password."});
@@ -158,11 +158,13 @@ app.delete("/api/request/:id", (req, res) =>{
 // rent part
 const rentSeed = [
   {
-    rentNumDays: 11,
-    userEmail: 'Michael@michael.com',
-    UserNameOfrent: "Michael Spencer",
-    PhoneOfrent: 6195495495,
-    DateOfrent: '2019-02-27',
+    rentTitle: 'Yahama Studio Speakers rental',
+    rentItemName: 'M260 Yamaha Speakers',
+    nameOfRenter: 'John Spencer',
+    emailRenter: 'john@spencer.com',
+    dateAvailable: '2019-02-24T08:47:49.871Z',
+    rentItemPrice: '120',
+    uniqueID: 'john@spencer.com Yamaha Studio Speakers rental'
   }
 ]
 
@@ -181,14 +183,7 @@ app.get("/api/rent", (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
-// Search rent
-app.get("/api/rent/:rentNumDaysber", (req, res) => {
-  const { rentNumDaysber } = req.params;
 
-  db.Rent.find({ where: { rentNumDays: rentNumDaysber }})
-  .then(datafoo => res.json(datafoo))
-  .catch(err => res.status(400).json(err));
-});
 
 // rent ROUTE
 app.post('/api/rent', (req, res) => {
@@ -199,13 +194,12 @@ app.post('/api/rent', (req, res) => {
   .catch(err => res.status(400).json(err));
 });
 
-// update a document in rent collection using its id
-app.put("/api/rent/:id", (req, res) =>{
-  db.Rent
-  .findOneAndUpdate({_id: req.params.id}, req.body)
-  .then(datafoo => res.json(datafoo))
-  .catch(err => res.status(422).json(err));
-}),
+// SIGNUP update value
+app.put('/api/signup/:id', (req, res) => {
+  db.User.findOneAndUpdate({_id: req.params.id}, req.body)
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+});
 
 // delete a record in rent collection using its id
 app.delete("/api/rent/:id", (req, res) =>{

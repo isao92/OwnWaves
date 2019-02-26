@@ -1,34 +1,81 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import React, {Component} from "react";
+// import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-
 import Button from "@material-ui/core/Button";
 import './HomeStyle.css';
+import AuthService from "./AuthService";
+import API from '../utils/API';
 
-const styles = theme => ({
-  paper: {
-    // card interior
+import TextField from '@material-ui/core/TextField';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import './FormButton.css';
 
-  },
-  root: {
-    // root div
-
-  },
-  headline: {
-    // card headline
-  },
-  headline2: {
-    // card 2 headline
+class HomePage extends Component {
+  constructor() {
+    super ();
+    this.Auth = new AuthService();
   }
-});
 
-function CenteredGrid(props) {
-  const { classes } = props;
+  componentWillMount() {
+    if (this.Auth.loggedIn()) {
+      try{
+        
+      }
+      catch(err){
+        console.log(err);
+      }
+    }
+  }
 
+  handleFormSubmit = event => {
+    event.preventDefault();
+    API.signUpUser(this.state.username, this.state.email, this.state.password)
+      .then(res => {
+        alert('Account for ' + this.state.username + ' created, you can now login');
+      })
+      .catch(err => alert(err));
+      
+  };
+
+  handleChange = event => {
+    const {name, value} = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+  
+  state = {
+    open: false,
+  };
+
+  handleClickOpen = () => {
+    this.setState({ open: true });
+    if (this.Auth.loggedIn()) {
+      try{
+        this.props.history.replace('/');
+      }
+      catch(err){
+        console.log(err);
+      }
+        alert('You are already logged in!');
+        this.setState({ open: false});
+        
+      };
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+
+  render(){
   return (
-    <div className={classes.root}>
+    <div>
 
       <div className="hero">
         
@@ -40,7 +87,6 @@ function CenteredGrid(props) {
             <svg className="homePage-main-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="8000px" height="1000px" viewBox="0 0 8000 1000" enableBackground="new 0 0 8000 1000">
             <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="4280.9766" y1="505.6514" x2="4572.6055" y2="505.6514">  <stop  offset="0" stopColor="#262262"/> <stop  offset="1" stopColor="#2484C6" stopOpacity="0"/>
             </linearGradient>
-            <circle fill="none" stroke="url(#SVGID_1_)" strokeWidth="9.4074" strokeMiterlimit="10" cx="4426.791" cy="505.649" r="141.111"/>
             <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="4186.9023" y1="599.7256" x2="4666.6802" y2="599.7256">
               <stop  offset="0" stopColor="#262262"/>
               <stop  offset="1" stopColor="#2484C6" stopOpacity="0"/>
@@ -175,13 +221,77 @@ function CenteredGrid(props) {
                         </Grid>
 
                         <Grid item xs={6}>
+                          
                           <div id="rent-homepage">
-                            Sign up to rent your equipment.
-                            <Button style={{backgroundColor: 'white'}}>
-                              <a href="/signup">
-                              Rent
-                              </a>
-                            </Button>
+                            Want to make some money on the side? Rent your studio, garage or equipment!
+                            <div>
+                              <Button variant="outlined" color="primary" onClick={this.handleClickOpen} style={{fontSize: '1.3rem'}}>
+                                Sign Up
+                              </Button>
+                              <Dialog
+                                open={this.state.open}
+                                onClose={this.handleClose}
+                                aria-labelledby="form-dialog-title"
+                                style ={{fontSize: '1.3rem'}}
+                              >
+                                <DialogTitle id="form-dialog-title">Sign Up</DialogTitle>
+                                
+                                <form onSubmit={this.handleFormSubmit}>
+                                <DialogContent >
+                                  <DialogContentText style={{fontSize: '1.3rem'}}> 
+                                    Enter your name, email and password.
+                                  </DialogContentText>
+                                   
+                                  <TextField
+                                    autoFocus
+                                    htmlFor="username"
+                                    name="username"
+                                    margin="dense"
+                                    id="username"
+                                    label="Full Name"
+                                    type="text"
+                                    fullWidth
+                                    onChange={this.handleChange}
+                                  />
+                                  <TextField style={{fontSize: '1.3rem'}}
+                                      htmlFor="email"
+                                      name="email"
+                                      margin="dense"
+                                      id="email"
+                                      label="Email Address"
+                                      type="email"
+                                      fullWidth
+                                      onChange={this.handleChange}
+                                    />
+                                  <TextField
+                                    htmlFor="pwd"
+                                    name="password"
+                                    margin="dense"
+                                    id="pwd"
+                                    label="Password"
+                                    type="password"
+                                    fullWidth
+                                    onChange={this.handleChange}
+                                  />
+                                  
+                                </DialogContent>
+                                <DialogActions>
+                                  <Button onClick={this.handleClose} color="primary">
+                                    Cancel
+                                  </Button>
+                                  <Button type="submit" onClick={this.handleClose} color="primary">
+                                  Sign Up
+                                  </Button>
+                                  
+                                </DialogActions>
+                              </form>
+                                
+                              </Dialog>
+                              
+                            </div>
+                        
+
+
                           </div>
                         </Grid>
 
@@ -225,13 +335,12 @@ function CenteredGrid(props) {
       
       </div>
 
-      <div className="footer">Copyright 2019</div>
+      <div className="footer">Copyright 2019 Agustin Chavez</div>
+
     </div>
   );
 }
+}
 
-CenteredGrid.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
-export default withStyles(styles)(CenteredGrid);
+export default HomePage;

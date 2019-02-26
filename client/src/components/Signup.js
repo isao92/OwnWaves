@@ -14,7 +14,7 @@ class Signup extends Component {
       this.props.history.replace('/');
     }
   }
-
+  
   handleFormSubmit = event => {
     event.preventDefault();
     API.signUpUser(this.state.username, this.state.email, this.state.password)

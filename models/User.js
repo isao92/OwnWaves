@@ -25,7 +25,47 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  rentsArray: [
+    {
+      rentItemName: {
+        type: String
+      },
+      rentTitle: {
+        type: String
+      }
+    },
+    {
+      rentTitle: {
+        type: String
+      }
+    },
+    // {
+    //   nameOfRenter: {
+    //     type: String
+    //   }
+    // },
+    // {
+    //   emailOfRenter: {
+    //     type: String
+    //   }
+    // },
+    // {
+    //   dateAvailable: {
+    //     type: Date
+    //   }
+    // },
+    // {
+    //   rentItemPrice: {
+    //     type: Number
+    //   }
+    // },
+    // {
+    //   uniqueID: {
+    //     type: String
+    //   }
+    // },
+]
 });
 
 // Execute before each user.save() call

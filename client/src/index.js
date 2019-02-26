@@ -19,9 +19,9 @@ import HomeStudio from './pages/HomeStudio';
 import CondenserMic from './pages/CondenserMic';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Homepage from './components/HomePage';
 import FindPlace from './pages/FindPlace';
 import FindMic from './pages/FindMic';
-
 // when logged in
 import RentPage from './pages/RentPage';
 import Profile from './components/Profile';
@@ -42,6 +42,7 @@ ReactDOM.render(
             <Route exact path="/rentpage" component={RentPage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/homepage" component={Homepage} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/findPlace" component={FindPlace} />
             <Route exact path="/findMic" component={FindMic} />
@@ -51,6 +52,7 @@ ReactDOM.render(
             <Route exact path="/ThreeRoomStudio" component={ThreeRoomStudio} />
             <Route exact path="/HomeStudio" component={HomeStudio}/>
             <Route exact path="/CondenserMic" component={CondenserMic}/>
+            
         </div>
     </Router>
     , document.getElementById('root')
