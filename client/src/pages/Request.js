@@ -194,7 +194,6 @@ class Request extends Component {
      
           <p style={{marginLeft: '15%', marginTop: '15px'}}>Want to rent? -><Link to="/signup">Go to Signup</Link></p>
 
-          
         </div>
       </div>
 

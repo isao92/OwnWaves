@@ -32,7 +32,7 @@ function SubheaderDividers(props) {
       </ListItem>
       <Divider component="li" />
       <li>
-        <Typography className={classes.dividerFullWidth} color="textSecondary" variant="caption">
+        <Typography className={classes.dividerFullWidth} color="textSecondary" variant="caption" style={{fontSize: '2rem'}}>
           3 day min
         </Typography>
       </li>

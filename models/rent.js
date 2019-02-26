@@ -5,19 +5,19 @@ const RentSchema = new Schema({
     rentTitle: { 
         type: String, 
     },
-    RentItemName: {
+    rentItemName: {
         type: String,
     },
-    NameOfRenter: {
+    nameOfRenter: {
         type: String,
     },
-    EmailRenter: {
+    emailRenter: {
         type: String,
     },
-    DateAvailable: {
+    dateAvailable: {
         type: Date,
     },
-    RentItemPrice: {
+    rentItemPrice: {
         type: Number,
     },
     uniqueID: {

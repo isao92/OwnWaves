@@ -11,36 +11,57 @@ class Rent extends Component {
     this.state = {
       rentTitle: "",
       rentItemName: "",
-      NameOfRenter: "",
-      EmailOfRenter: "",
-      DateAvailable: "",
-      RentItemPrice: "",
-      uniqueID: ""
-  }
-  }
-
+      nameOfRenter: "",
+      emailOfRenter: "",
+      dateAvailable: "",
+      rentItemPrice: "",
+      uniqueID: "",
+      username: "",
+      email: ""
+  }}
 
   handleFormSubmit = event => {
     
     event.preventDefault();
 
-    API.startRent(this.state.rentTitle, this.state.rentItemName, this.state.NameOfRenter, this.state.EmailOfRenter, this.state.DateAvailable, this.state.RentItemPrice, this.state.uniqueID)
+    // startRent pushes values into the api call to populate the rents section for admin use
+    API.startRent(this.state.rentTitle, this.state.rentItemName, this.state.nameOfRenter, this.state.emailOfRenter, this.state.dateAvailable, this.state.rentItemPrice, this.state.uniqueID)
       .then(res => {
-        alert(`We will process your form ${res.data.NameOfRenter}`)
+        alert(`We will process your form ${res.data.nameOfRenter}`)
         this.setState({ 
           rentTitle: res.data,
           rentItemName: res.data,
-          NameOfRenter: res.data,
-          EmailOfRenter: res.data,
-          DateAvailable: res.data,
-          RentItemPrice: res.data,
+          nameOfRenter: res.data,
+          emailOfRenter: res.data,
+          dateAvailable: res.data,
+          rentItemPrice: res.data,
           uniqueID: res.data
         })
-
       })
       .catch(err => {
         alert(err.response.data.message)
       });
+
+      // //get user id to then post the rentItemName to that user
+      // API.getUser(this.props.user.id).then(res => {
+      //   this.setState({
+      //     username: res.data.username,
+      //     email: res.data.email
+      //   })
+      // });
+      
+
+      // store same information into user's array so that he can see his own rental proposals
+      API.startRentUser(this.props.user.id, this.state.rentTitle, this.state.rentItemName)
+      .then(res => {
+        console.log(res);
+        this.props.history.replace('/login');
+        
+      })
+      .catch(err => {
+        alert(err.response.data.message)
+      });
+
   };
 
   handleChange = event => {
@@ -77,23 +98,23 @@ class Rent extends Component {
               </div>
               <div className="row">
               <div className="col-sm-1"></div>
-                {`Item Name: ${rent.RentItemName}`}
+                {`Item Name: ${rent.rentItemName}`}
               </div>
               <div className="row">
               <div className="col-sm-1"></div>
-                {`Name: ${rent.NameOfRenter}`}
+                {`Name: ${rent.nameOfRenter}`}
               </div>
               <div className="row">
               <div className="col-sm-1"></div>
-                {`Email: ${rent.EmailOfRenter}`}
+                {`Email: ${rent.emailOfRenter}`}
               </div>
               <div className="row">
               <div className="col-sm-1"></div>
-                {`Date: ${rent.DateAvailable}`}
+                {`Date: ${rent.dateAvailable}`}
               </div>
               <div className="row">
               <div className="col-sm-1"></div>
-                {`Price: ${rent.RentItemPrice}`}
+                {`Price: ${rent.rentItemPrice}`}
               </div>
               <div className="row">
               <div className="col-sm-1"></div>
@@ -105,10 +126,6 @@ class Rent extends Component {
         );
       });
     } 
-    // else {
-    //   rentRows = <p>Loading...</p>;
-    // }
-    // Kat Search Rent --------------------
 
     return (
       <div className="container">
@@ -138,39 +155,39 @@ class Rent extends Component {
                         onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="NameOfRenter">Name:</label>
+                  <label htmlFor="nameOfRenter">Name:</label>
                   <input className="form-control"
                         placeholder="Enter Your Name Here"
-                        name="NameOfRenter"
+                        name="nameOfRenter"
                         type="name"
-                        id="NameOfRenter"
+                        id="nameOfRenter"
                         onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="EmailOfRenter">Email:</label>
+                  <label htmlFor="emailOfRenter">Email:</label>
                   <input className="form-control"
                         placeholder="email@email.com"
-                        name="EmailOfRenter"
+                        name="emailOfRenter"
                         type="email"
-                        id="EmailOfRenter"
+                        id="emailOfRenter"
                         onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="DateOfRent">Date Available:</label>
+                  <label htmlFor="dateAvailable">Date Available:</label>
                   <input className="form-control"
                         placeholder="Enter Date"
-                        name="DateOfRent"
+                        name="dateAvailable"
                         type="date"
-                        id="DateOfRent"
+                        id="dateAvailable"
                         onChange={this.handleChange}/>
                 </div>
-                <div className="form-group" style={{marginBottom: '500px'}}>
-                  <label htmlFor="RentItemPrice">Price:</label>
+                <div className="form-group">
+                  <label htmlFor="rentItemPrice">Price:</label>
                   <input className="form-control"
                         placeholder="$123"
-                        name="RentItemPrice"
+                        name="rentItemPrice"
                         type="number"
-                        id="RentItemPrice"
+                        id="rentItemPrice"
                         onChange={this.handleChange}/>
                 </div>
                 
