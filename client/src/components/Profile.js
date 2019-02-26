@@ -8,6 +8,7 @@ class Profile extends Component {
   constructor () {
     super ()
     this.state = {
+      id: "",
       rentsArray: [],
       rentTitle: "",
       rentItemName: "",
@@ -26,7 +27,8 @@ class Profile extends Component {
       this.setState({
         username: res.data.username,
         email: res.data.email,
-        rentsArray : res.data.rentsArray
+        rentsArray : res.data.rentsArray,
+        id: res.data._id
       })
     });
     
@@ -42,7 +44,7 @@ class Profile extends Component {
 
         <div className="therentals" style={{fontSize: '1.5rem'}}>
         {this.state.rentsArray.map(item => (
-          <div className="parent">
+          <div key={item._id} className="parent">
           <p>Title: {item.rentTitle}</p>
           <p>TitleItemName: {item.rentItemName}</p>
           </div>
