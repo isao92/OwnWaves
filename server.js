@@ -128,7 +128,7 @@ app.get("/api/request/:requestNumDaysber", (req, res) => {
 
 // Request ROUTE
 app.post('/api/request', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   db.Request
   .create(req.body)
   .then(dbRequest => res.json(dbRequest))
@@ -160,7 +160,7 @@ const rentSeed = [
   {
     rentTitle: 'Yahama Studio Speakers rental',
     rentItemName: 'M260 Yamaha Speakers',
-    nameOfRenter: 'John Spencer',
+    addressOfRental: 'John Spencer',
     emailRenter: 'john@spencer.com',
     dateAvailable: '2019-02-24T08:47:49.871Z',
     rentItemPrice: '120',
@@ -187,7 +187,7 @@ app.get("/api/rent", (req, res) => {
 
 // rent ROUTE
 app.post('/api/rent', (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   db.Rent
   .create(req.body)
   .then(dbrent => res.json(dbrent))

@@ -7,9 +7,7 @@ import Grid from "@material-ui/core/Grid";
 class RentPage extends Component {
 
   render() {
-    console.log(process.env.REACT_APP_SECRET_CODE);
-
-
+    
     return (
       <div>
 

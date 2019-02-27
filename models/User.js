@@ -33,18 +33,14 @@ const UserSchema = new Schema({
       },
       rentTitle: {
         type: String
-      }
-    },
-    {
-      rentTitle: {
+      },
+      addressOfRental: {
+        type: String
+      },
+      rentItemPrice: {
         type: String
       }
     },
-    // {
-    //   nameOfRenter: {
-    //     type: String
-    //   }
-    // },
     // {
     //   emailOfRenter: {
     //     type: String
@@ -55,11 +51,7 @@ const UserSchema = new Schema({
     //     type: Date
     //   }
     // },
-    // {
-    //   rentItemPrice: {
-    //     type: Number
-    //   }
-    // },
+
     // {
     //   uniqueID: {
     //     type: String

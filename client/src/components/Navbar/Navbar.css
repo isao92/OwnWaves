@@ -74,7 +74,18 @@
     #title-in-navbar{
         font-size: 1.9rem;
     }
+    .container {
+        max-width: 1060px;
+    }
 }
+
+
+@media (min-width: 1200px){
+.container {
+    max-width: 1440px;
+}
+}
+
 @media (min-width:1400px){
     #title-in-navbar{
         font-size: 1.9rem;

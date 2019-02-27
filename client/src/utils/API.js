@@ -97,35 +97,37 @@ export default {
     return axios.get(`/api/rent/${id}`);
   },
 
+
   // create the rental item in rents collection
-  startRent: (rentTitle, rentItemName, nameOfRenter, emailRenter, dateAvailable, rentItemPrice, uniqueID) => {
+  startRent: (rentTitle, rentItemName, addressOfRental, emailRenter, dateAvailable, rentItemPrice, uniqueID) => {
     return axios.post('api/rent', {
       rentTitle: rentTitle,
       rentItemName: rentItemName,
-      nameOfRenter: nameOfRenter,
+      addressOfRental: addressOfRental,
       emailRenter: emailRenter,
       dateAvailable: dateAvailable,
       rentItemPrice: rentItemPrice,
       uniqueID: uniqueID
     }); 
   },
+  
 
   // create rental for user profile
-  startRentUser: (id, rentTitle, rentItemName) => {
-    console.log('hello');
+  startRentUser: (id, rentTitle, rentItemName, addressOfRental, rentItemPrice) => {
+    console.log(rentTitle + " " + addressOfRental);
     return axios.put(`api/signup/${id}`, {
-      rentsArray:{id, rentTitle: rentTitle, rentItemName: rentItemName}
+      rentsArray:{id, rentTitle: rentTitle, rentItemName: rentItemName, addressOfRental: addressOfRental, rentItemPrice: rentItemPrice}
     }); 
   },
 
 
   
   // add rent info from user
-  addRentFromUser: (rentTitle, rentItemName, nameOfRenter, emailRenter, dateAvailable, rentItemPrice, uniqueID) => {
+  addRentFromUser: (rentTitle, rentItemName, addressOfRental, emailRenter, dateAvailable, rentItemPrice, uniqueID) => {
     return axios.push('api/user/rentsArray', {
       rentTitle: rentTitle,
       rentItemName: rentItemName,
-      nameOfRenter: nameOfRenter,
+      addressOfRental: addressOfRental,
       emailRenter: emailRenter,
       dateAvailable: dateAvailable,
       rentItemPrice: rentItemPrice,

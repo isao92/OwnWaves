@@ -8,7 +8,7 @@ const RentSchema = new Schema({
     rentItemName: {
         type: String,
     },
-    nameOfRenter: {
+    addressOfRental: {
         type: String,
     },
     emailRenter: {

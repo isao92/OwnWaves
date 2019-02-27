@@ -17,8 +17,6 @@ class ThreeRoomStudio extends Component {
             {/* whole page container */}
             <Grid container spacing={16} style={{width: '100%', margin: '0', flexBasis: '100%', maxWidth: '100%'}}>
 
-
-
             <div className="background-svg-div">
 
             <svg className="background-svg"  x="0px" y="0px" width="2193.543px" height="1500px" viewBox="0 0 2193.543 1233.266" enableBackground="new 0 0 2193.543 1233.266">
@@ -205,7 +203,7 @@ class ThreeRoomStudio extends Component {
 
                 <Grid item xs={1}></Grid>
 
-                <Grid item xs={5} >
+                <Grid item xs={5} className="description-threeroom">
                 <DescriptionRental/> 
                 </Grid>
 
