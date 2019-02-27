@@ -184,42 +184,34 @@ class HomePage extends Component {
                     <Paper className="paper-section" id="paper-section" >
                       
                       <div className="paper-title-homepage" style={{textAlign: 'center'}}>
-                      Create your OWN experience.
+                      Build Your Own Studio
                       </div>
                       
                       <hr></hr>
-
+                          <div className="homepage-how">
                             <div className="explanation-title-homepage">
                               So how does it work?
                             </div>
                             <div className="explanation-text-homepage">
-                              "If you want to go far do it yourself, if you want to go farther work in a team" - Travis T. <br/> 
-                              Our potential comes thanks to local artists and people like you that provide space or allow others to rent equipment in order to give them the opportunity to create their own personalized studio environment. 
-                              Click here to learn more!
-
+                            1- <Button style={{fontSize: '1.4rem', backgroundColor: 'white'}}>
+                              <a href="/findPlace">
+                              Book a place
+                              </a>
+                            </Button> either here or in your room or garage <br/>
+                            2- Find specific <Button style={{fontSize: '1.4rem', backgroundColor: 'white'}}>
+                              <a href="/buildsPage">
+                              Rental Equipment
+                              </a>
+                            </Button>that you will need to capture your sound and performance<br/>
+                            3- Make the final touches and show the world what you've created!
                             </div>
+                          </div>
+
                       <hr></hr>
 
                       <Grid container spacing={8}>
 
-                        <Grid item xs={6}>
-                          <div id="book-homepage">
-                            
-                            Create your own recording experience.
-                            
-                            <Button style={{backgroundColor: 'white'}}>
-                              <a href="/findPlace">
-                              Book a place
-                              </a>
-                            </Button>
-                            <Button style={{backgroundColor: 'white'}}>
-                              <a href="/buildsPage">
-                              Rent equipment
-                              </a>
-                            </Button>
-                          </div>
-                        </Grid>
-
+                        <Grid item xs={3}> </Grid>
                         <Grid item xs={6}>
                           
                           <div id="rent-homepage">
@@ -294,9 +286,19 @@ class HomePage extends Component {
 
                           </div>
                         </Grid>
-
+                        <Grid item xs={3}> </Grid>
+                        <Grid item xs={3}></Grid>
+                        <Grid item xs={6} className="grid-more-info">
+                        <div className="more-info">
+                        "If you want to go far do it yourself, if you want to go farther work in a team" - Travis T.
+                        Our potential comes thanks to local artists and people like you that provide space or allow others to rent equipment in order to give them the opportunity to create their own personalized studio environment. 
+                        Click here to learn more!
+                        </div>
+                        </Grid>
+                        <Grid item xs={3}></Grid>
                       </Grid>
                     </Paper>
+
             </Grid>
           </Grid>
 
