@@ -25,7 +25,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://' + process.env.REACT_APP_MONGO_USER_NAME + ':' + process.env.REACT_APP_MONGO_PASSWORD + '@ds137255.mlab.com:37255/ownwaves', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://' + process.env.REACT_APP_MONGO_USER_NAME + ':' + process.env.REACT_APP_MONGO_PASSWORD + '@ds159662.mlab.com:59662/heroku_1gzq8hm0', {useNewUrlParser: true});
 mongoose.set('useCreateIndex', true);
 
 // Init the express-jwt middleware
