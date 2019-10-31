@@ -1,0 +1,91 @@
+/* footer */
+.footer {
+  bottom: 0;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 10px) {
+  html {
+    font-size: 3px;
+  }
+}
+
+@media (min-width: 300px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media (min-width: 500px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (min-width: 1000px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1500px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+/* NEW CSS */
+
+main {
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+}
+
+article {
+  position: relative;
+  top: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pattern styles */
+.mainPage-container {
+  display: grid;
+}
+
+.left-half {
+  background-image: url('../assets/images/bg_rentalSpace.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-column: 1;
+}
+
+.right-half {
+  background-image: url('../assets/images/bg_GearRental3.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 2;
+}
+
+/* Desktop Responsive */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .right-half {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}

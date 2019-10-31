@@ -1,93 +1,92 @@
-.navbar{
-    
-    font-family: 'Montserrat', sans-serif;
-    position: fixed;
-    width: 100%;
-    background-color: #ffffffee;
-    z-index: 5000;
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffffee;
+  z-index: 5000;
 }
 
-.navbar img{
-    width: 50px;
-    padding-right: 8px;
-    padding-top: 8px;
+.navbar img {
+  width: 50px;
+  padding-right: 8px;
+  padding-top: 8px;
 }
 
-.navbar, .navbar-brand{
-    font-size: 1.7rem;
+.navbar,
+.navbar-brand {
+  font-size: 1.7rem;
 }
 
-#hamburger-button{
-    margin-top: 5%;
+#hamburger-button {
+  margin-top: 5%;
 }
 
-.navbar-collapse{
-    font-size: 1.6rem;
-    font-weight: 500;
+.navbar-collapse {
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
-.navbar-toggler-icon{
-    width: 5.8em;
-    height: 2.4em;
-    margin-top: 20%;
-    padding-bottom: 10%;
+.navbar-toggler-icon {
+  width: 5.8em;
+  height: 2.4em;
+  margin-top: 20%;
+  padding-bottom: 10%;
 }
 
-#title-in-navbar{
-    float: right;
-    margin-top: 15px;
-    font-size: 2.2rem;
-    font-family: 'Anton', sans-serif;
+#title-in-navbar {
+  float: right;
+  margin-top: 15px;
+  font-size: 2.2rem;
+  font-family: 'Anton', sans-serif;
 }
 
-@media (min-width:10px){
-    #title-in-navbar{
-        font-size: 5rem;
-    }
+@media (min-width: 10px) {
+  #title-in-navbar {
+    font-size: 5rem;
+  }
 }
-@media (min-width:300px){
-    #title-in-navbar{
-        font-size: 4.5rem;
-    }
+@media (min-width: 300px) {
+  #title-in-navbar {
+    font-size: 4.5rem;
+  }
 }
-@media (min-width:400px){
-    #title-in-navbar{
-        font-size: 3.1rem;
-    }
+@media (min-width: 400px) {
+  #title-in-navbar {
+    font-size: 3.1rem;
+  }
 }
-@media (min-width:500px){
-    #title-in-navbar{
-        font-size: 2.9rem;
-    }
+@media (min-width: 500px) {
+  #title-in-navbar {
+    font-size: 2.9rem;
+  }
 }
-@media (min-width:600px){
-    #title-in-navbar{
-        font-size: 1.9rem;
-    }
+@media (min-width: 600px) {
+  #title-in-navbar {
+    font-size: 1.9rem;
+  }
 }
-@media (min-width:700px){
-    #title-in-navbar{
-        font-size: 1.9rem;
-    }
+@media (min-width: 700px) {
+  #title-in-navbar {
+    font-size: 1.9rem;
+  }
 }
-@media (min-width:900px){
-    #title-in-navbar{
-        font-size: 1.9rem;
-    }
-    .container {
-        max-width: 1060px;
-    }
+@media (min-width: 900px) {
+  #title-in-navbar {
+    font-size: 1.9rem;
+  }
+  .container {
+    max-width: 1060px;
+  }
 }
 
-
-@media (min-width: 1200px){
-.container {
+@media (min-width: 1200px) {
+  .container {
     max-width: 1440px;
-}
+  }
 }
 
-@media (min-width:1400px){
-    #title-in-navbar{
-        font-size: 1.9rem;
-    }
+@media (min-width: 1400px) {
+  #title-in-navbar {
+    font-size: 1.9rem;
+  }
 }
