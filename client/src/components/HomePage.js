@@ -182,7 +182,6 @@ class HomePage extends Component {
 
             
                     <Paper className="paper-section" id="paper-section" >
-                      
                       <div className="paper-title-homepage" style={{textAlign: 'center'}}>
                       Build Your Own Studio
                       </div>
