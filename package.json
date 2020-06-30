@@ -29,7 +29,7 @@
     "dotenv": "^8.1.0",
     "eslint-utils": "^1.4.2",
     "express": "^4.17.1",
-    "express-jwt": "^5.3.1",
+    "express-jwt": "^6.0.0",
     "global": "^4.4.0",
     "handlebars": "^4.4.3",
     "if-env": "^1.0.4",
