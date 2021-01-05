@@ -24,7 +24,7 @@
   "dependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bcrypt-nodejs": "^0.0.3",
     "dotenv": "^8.1.0",
     "eslint-utils": "^1.4.2",
